@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alter — Multi-chain EVM address intelligence</title>
+<meta name="description" content="Alter identifies any EVM address — wallets, tokens, contracts — and proves it with on-chain evidence. Web app, CLI, and MCP server for AI agents.">
+<link rel="canonical" href="https://www.alter-evm.com/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#0F172A">
+<meta property="og:title" content="Alter — Multi-chain EVM address intelligence">
+<meta property="og:description" content="Know what an address is before you touch it.">
+<meta property="og:url" content="https://www.alter-evm.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0F172A;
+  --surface: #14203A;
+  --ink: #F1F5F9;
+  --muted: #8CA3C3;
+  --proof: #BAE6FD;
+  --frame: rgba(203, 213, 225, 0.4);
+  --hairline: rgba(203, 213, 225, 0.14);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--proof); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--proof);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+code, .mono { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- header ---------- */
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 28px 0;
+}
+.wordmark {
+  font-weight: 700; font-size: 26px; letter-spacing: -0.01em; color: var(--ink);
+}
+.wordmark sup {
+  font-size: 0.52em; font-weight: 500; margin-left: 1px;
+  border-bottom: 2px solid var(--proof); padding-bottom: 1px;
+}
+.wordmark:hover { text-decoration: none; }
+header nav a { color: var(--muted); font-size: 15px; }
+header nav a:hover { color: var(--ink); }
+
+/* ---------- hero : the reading frame ---------- */
+.hero { padding: 72px 0 40px; }
+.frame {
+  position: relative;
+  padding: 44px 32px 52px;
+  margin-bottom: 40px;
+}
+.frame .corner {
+  position: absolute; width: 26px; height: 26px;
+  border: 2.5px solid var(--frame); border-radius: 2px;
+}
+.corner.tl { top: 0; left: 0; border-right: none; border-bottom: none; }
+.corner.tr { top: 0; right: 0; border-left: none; border-bottom: none; }
+.corner.bl { bottom: 0; left: 0; border-right: none; border-top: none; }
+.corner.br { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+.address {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: clamp(17px, 2.9vw, 29px);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+  color: var(--ink);
+}
+.proof-line {
+  height: 3px; background: var(--proof); border-radius: 2px;
+  margin: 18px 0 16px; width: 46%;
+  transform-origin: left center;
+  animation: draw 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s backwards;
+}
+@keyframes draw { from { transform: scaleX(0); } }
+.resolution {
+  font-size: clamp(15px, 2.2vw, 19px);
+  color: var(--muted);
+  animation: appear 0.5s ease 0.9s backwards;
+}
+.resolution strong { color: var(--proof); font-weight: 500; }
+@keyframes appear { from { opacity: 0; transform: translateY(4px); } }
+@media (prefers-reduced-motion: reduce) {
+  .proof-line, .resolution { animation: none; }
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;
+  max-width: 640px;
+}
+.hero .sub {
+  margin-top: 18px; max-width: 620px;
+  color: var(--muted); font-size: clamp(16px, 2vw, 18px);
+}
+
+/* ---------- access cards ---------- */
+.access { padding: 40px 0 8px; }
+.cards {
+  display: grid; gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 26px 24px 24px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.card h2 { font-size: 19px; font-weight: 700; }
+.card p { color: var(--muted); font-size: 15px; flex-grow: 1; }
+.card pre {
+  background: rgba(2, 6, 23, 0.55);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-size: 13.5px; line-height: 1.7;
+}
+.card pre code { color: var(--proof); }
+.card .go {
+  display: inline-block; font-weight: 500; font-size: 15px;
+}
+.card .go::after { content: " →"; }
+
+/* ---------- platforms note ---------- */
+.platforms {
+  margin: 28px 0 0; padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+  color: var(--muted); font-size: 14px;
+}
+
+/* ---------- footer ---------- */
+footer {
+  margin-top: 72px; padding: 28px 0 44px;
+  border-top: 1px solid var(--hairline);
+  display: flex; flex-wrap: wrap; gap: 10px 26px;
+  color: var(--muted); font-size: 14.5px;
+}
+footer a { color: var(--muted); }
+footer a:hover { color: var(--ink); }
+footer .spacer { flex-grow: 1; }
+@media (max-width: 560px) {
+  .frame { padding: 30px 22px 38px; }
+  .hero { padding-top: 40px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="wordmark" href="/">Alt<sup>er</sup></a>
+    <nav>
+      <a href="https://github.com/VISIALIS/alter">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <figure class="frame" aria-label="Example: Alter identifies the USDT contract address">
+        <span class="corner tl" aria-hidden="true"></span>
+        <span class="corner tr" aria-hidden="true"></span>
+        <span class="corner bl" aria-hidden="true"></span>
+        <span class="corner br" aria-hidden="true"></span>
+        <div class="address">0xdAC17F958D2ee523a2206206994597C13D831ec7</div>
+        <div class="proof-line" aria-hidden="true"></div>
+        <figcaption class="resolution">
+          <strong>Tether USD</strong> · ERC-20 token · Ethereum — verified on-chain
+        </figcaption>
+      </figure>
+
+      <h1>Know what an address is before you touch it.</h1>
+      <p class="sub">
+        Alter identifies any EVM address — wallets, tokens, contracts — and
+        backs every classification with on-chain evidence. The same engine
+        drives a web app, a command-line tool, and an MCP server for AI agents.
+      </p>
+    </section>
+
+    <section class="access" aria-label="Ways to use Alter">
+      <div class="cards">
+        <div class="card">
+          <h2>Web app</h2>
+          <p>Explore addresses, capabilities, and their connections, visually. No install.</p>
+          <a class="go" href="https://app.alter-evm.com/">Open app.alter-evm.com</a>
+        </div>
+
+        <div class="card">
+          <h2>CLI &amp; MCP server</h2>
+          <p>Classify addresses from scripts, or let AI agents query on-chain facts through MCP.</p>
+          <pre><code>brew tap VISIALIS/alter
+brew install alter-cli
+brew install alter-mcp</code></pre>
+        </div>
+
+        <div class="card">
+          <h2>Desktop</h2>
+          <p>Native macOS app, notarized by Apple. Install with Homebrew or grab the DMG.</p>
+          <pre><code>brew install --cask alter</code></pre>
+          <a class="go" href="https://github.com/VISIALIS/alter/releases/latest">Download from Releases</a>
+        </div>
+      </div>
+
+      <p class="platforms">
+        Available today: macOS (Apple Silicon &amp; Intel) and the web.
+        iOS and Android are in private beta.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://github.com/VISIALIS/alter/releases">Releases</a>
+    <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew tap</a>
+    <a href="https://github.com/VISIALIS/alter/issues">Report an issue</a>
+    <span class="spacer"></span>
+    <span>© 2026 VISIALIS</span>
+  </footer>
+</div>
+
+</body>
+</html>
