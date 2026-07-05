@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-labelledby="title desc">
+  <title id="title">Alter — micro-icône</title>
+  <desc id="desc">Micro-icône Alter pour 16, 24 et 32 pixels, variante Alt seul sans exposant er.</desc>
+  <rect id="background" width="1024" height="1024" fill="#0F172A"/>
+  <g id="wordmark-alt" fill="#FFFFFF">
+    <path d="M52 0H254L398 416H1012L1161 0H1361L813 1490H593ZM456 582 561 884C593 976 639 1118 702 1338C765 1122 809 984 845 884L953 582Z" transform="translate(164 648) scale(0.252,-0.252)"/>
+    <path d="M338 1490H158V0H338Z" transform="translate(520 648) scale(0.252,-0.252)"/>
+    <path d="M598 1118H368V1384H188V1118H20V964H188V276C188 93 302 -14 495 -14C541 -14 592 -7 629 6L592 158C562 152 523 146 500 146C405 146 368 190 368 290V964H598Z" transform="translate(642 648) scale(0.252,-0.252)"/>
+  </g>
+  <path id="proof-line" d="M326 720H698" stroke="#BAE6FD" stroke-width="18" stroke-linecap="round"/>
+</svg>
