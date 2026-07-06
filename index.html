@@ -39,22 +39,136 @@
             <p class="subtitle">Clearer. Safer. Verified by yourself on any explorer.</p>
             <div class="cta-group">
                 <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Open Web App</a>
-                <a href="/get/" class="btn btn-secondary">Get the Apps</a>
+                <a href="/get/" class="btn btn-secondary">Download Desktop / CLI</a>
             </div>
-            <figure class="hero-example" aria-label="Example: Alter identifies the USDT contract address">
-                <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
-                <div class="example-proof-line" aria-hidden="true"></div>
-                <figcaption class="example-result"><strong>Tether USD</strong> · ERC-20 token · Ethereum — verified on-chain</figcaption>
-            </figure>
+            <div class="hero-carousel" aria-live="polite" aria-label="Examples of addresses classified by Alter">
+                <!-- Slide 1: USDT -->
+                <div class="carousel-slide active">
+                    <div class="use-case-label">Verify a stablecoin before swapping</div>
+                    <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>Tether USD</strong> · ERC-20 token · Ethereum — verified on-chain</div>
+                </div>
+                <!-- Slide 2: USDC -->
+                <div class="carousel-slide">
+                    <div class="use-case-label">Analyze an institutional stablecoin</div>
+                    <code class="example-address">0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>USD Coin</strong> · ERC-20 token · Ethereum — verified on-chain</div>
+                </div>
+                <!-- Slide 3: UNI -->
+                <div class="carousel-slide">
+                    <div class="use-case-label">Study a governance token</div>
+                    <code class="example-address">0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>Uniswap</strong> · governance token · Ethereum — verified on-chain</div>
+                </div>
+                <!-- Slide 4: Uniswap Router -->
+                <div class="carousel-slide">
+                    <div class="use-case-label">Discover a DeFi protocol's capabilities</div>
+                    <code class="example-address">0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>Uniswap V2 Router</strong> · DeFi contract — verified on-chain</div>
+                </div>
+            </div>
+
+            <script>
+            (function() {
+                const carousel = document.querySelector('.hero-carousel');
+                if (!carousel) return;
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                let current = 0;
+                let interval = null;
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === index);
+                    });
+                }
+
+                function nextSlide() {
+                    current = (current + 1) % slides.length;
+                    showSlide(current);
+                }
+
+                function startAutoSlide() {
+                    if (interval) clearInterval(interval);
+                    interval = setInterval(nextSlide, 4200);
+                }
+
+                function stopAutoSlide() {
+                    if (interval) {
+                        clearInterval(interval);
+                        interval = null;
+                    }
+                }
+
+                // Pause on hover / focus for accessibility
+                carousel.addEventListener('mouseenter', stopAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+                carousel.addEventListener('focusin', stopAutoSlide);
+                carousel.addEventListener('focusout', startAutoSlide);
+
+                // Start
+                showSlide(0);
+                startAutoSlide();
+            })();
+            </script>
         </div>
     </header>
 
-    <div style="max-width: 620px; margin: 1.5rem auto 2.5rem; padding: 1rem 1.25rem; text-align: center; color: #64748b; font-size: 1rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+    <div style="max-width: 620px; margin: 1.5rem auto 2.5rem; padding: 1rem 1.25rem; text-align: center; color: #64748b; font-size: 1rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(10px);">
         Alter reads the facts <strong>directly from the blockchain</strong> (no third-party databases).<br>
         You can verify everything yourself on <a href="https://etherscan.io" target="_blank" style="color: #a5b4fc;">Etherscan</a> or <a href="https://gnosisscan.io" target="_blank" style="color: #a5b4fc;">GnosisScan</a>.
     </div>
 
-    
+    <div class="supported-chains-marquee">
+        <div class="chains-track">
+            <span>Ethereum</span>
+            <span>Arbitrum</span>
+            <span>Optimism</span>
+            <span>Polygon</span>
+            <span>Base</span>
+            <span>Gnosis</span>
+            <span>Avalanche</span>
+            <span>BNB Chain</span>
+            <span>+ Any EVM</span>
+            <!-- Duplicate for infinite scroll -->
+            <span aria-hidden="true">Ethereum</span>
+            <span aria-hidden="true">Arbitrum</span>
+            <span aria-hidden="true">Optimism</span>
+            <span aria-hidden="true">Polygon</span>
+            <span aria-hidden="true">Base</span>
+            <span aria-hidden="true">Gnosis</span>
+            <span aria-hidden="true">Avalanche</span>
+            <span aria-hidden="true">BNB Chain</span>
+            <span aria-hidden="true">+ Any EVM</span>
+        </div>
+    </div>
+
+    <section class="how-it-works">
+        <h2 class="section-title">How it works</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Input</h3>
+                <p>Provide an EVM address or query</p>
+            </div>
+            <div class="step-arrow"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Process</h3>
+                <p>Alter queries public RPCs directly (Privacy First)</p>
+            </div>
+            <div class="step-arrow"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Output</h3>
+                <p>Get clear, human-readable, and verifiable facts</p>
+            </div>
+        </div>
+    </section>
+
     <section id="profiles" class="profiles-section">
         <h2 class="section-title">Built for your workflow</h2>
         <p class="section-subtitle">Alter adapts to your technical profile, from simple web UI to programmatic API.</p>

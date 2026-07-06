@@ -41,11 +41,79 @@
                 <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Ouvrir l'App Web</a>
                 <a href="/get/" class="btn btn-secondary">Voir les Applications</a>
             </div>
-            <figure class="hero-example" aria-label="Exemple : Alter identifie l'adresse du contrat USDT">
-                <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
-                <div class="example-proof-line" aria-hidden="true"></div>
-                <figcaption class="example-result"><strong>Tether USD</strong> · jeton ERC-20 · Ethereum — vérifié on-chain</figcaption>
-            </figure>
+            <div class="hero-carousel" aria-live="polite" aria-label="Exemples d'adresses classifiées par Alter">
+                <!-- Slide 1: USDT -->
+                <div class="carousel-slide active">
+                    <div class="use-case-label">Vérifier un stablecoin avant un swap</div>
+                    <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>Tether USD</strong> · jeton ERC-20 · Ethereum — vérifié on-chain</div>
+                </div>
+                <!-- Slide 2: USDC -->
+                <div class="carousel-slide">
+                    <div class="use-case-label">Analyser un stablecoin institutionnel</div>
+                    <code class="example-address">0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>USD Coin</strong> · jeton ERC-20 · Ethereum — vérifié on-chain</div>
+                </div>
+                <!-- Slide 3: UNI -->
+                <div class="carousel-slide">
+                    <div class="use-case-label">Étudier un jeton de gouvernance</div>
+                    <code class="example-address">0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>Uniswap</strong> · jeton de gouvernance · Ethereum — vérifié on-chain</div>
+                </div>
+                <!-- Slide 4: Uniswap Router -->
+                <div class="carousel-slide">
+                    <div class="use-case-label">Découvrir les capacités d'un protocole DeFi</div>
+                    <code class="example-address">0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D</code>
+                    <div class="example-proof-line" aria-hidden="true"></div>
+                    <div class="example-result"><strong>Uniswap V2 Router</strong> · contrat DeFi — vérifié on-chain</div>
+                </div>
+            </div>
+
+            <script>
+            (function() {
+                const carousel = document.querySelector('.hero-carousel');
+                if (!carousel) return;
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                let current = 0;
+                let interval = null;
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle('active', i === index);
+                    });
+                }
+
+                function nextSlide() {
+                    current = (current + 1) % slides.length;
+                    showSlide(current);
+                }
+
+                function startAutoSlide() {
+                    if (interval) clearInterval(interval);
+                    interval = setInterval(nextSlide, 4200);
+                }
+
+                function stopAutoSlide() {
+                    if (interval) {
+                        clearInterval(interval);
+                        interval = null;
+                    }
+                }
+
+                // Pause on hover / focus for accessibility
+                carousel.addEventListener('mouseenter', stopAutoSlide);
+                carousel.addEventListener('mouseleave', startAutoSlide);
+                carousel.addEventListener('focusin', stopAutoSlide);
+                carousel.addEventListener('focusout', startAutoSlide);
+
+                // Start
+                showSlide(0);
+                startAutoSlide();
+            })();
+            </script>
         </div>
     </header>
 
