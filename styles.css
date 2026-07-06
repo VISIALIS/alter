@@ -321,7 +321,7 @@ body {
 
 .action-with-qr {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 0.5rem;
     position: relative;
     margin-bottom: 1rem;
@@ -331,6 +331,9 @@ body {
     flex: 1;
     text-align: center;
     margin-bottom: 0; /* Override any existing bottom margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .qr-btn {
@@ -338,17 +341,18 @@ body {
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
     cursor: pointer;
-    padding: 0.75rem;
+    padding: 0 1rem;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.2s, border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
 }
 
 .qr-btn:hover {
     color: var(--text-primary);
     border-color: var(--text-primary);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .qr-modal {
