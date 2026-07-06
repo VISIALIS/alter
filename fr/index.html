@@ -66,7 +66,20 @@
                     </ul>
                 </div>
                 <div class="profile-actions">
-                    <a href="https://app.alter-evm.com/" class="btn btn-primary">Ouvrir l'application Web</a>
+                    <div class="action-with-qr">
+                        <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Ouvrir l'App Web</a>
+                        <button class="qr-btn" aria-label="Afficher le QR Code" title="Scanner pour ouvrir sur mobile" onclick="this.nextElementSibling.classList.toggle('visible')">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                        <div class="qr-popup">
+                            <img src="/qr-app.svg" alt="QR Code pour l'App Web" width="120" height="120">
+                        </div>
+                    </div>
                     <div class="profile-links">
                         <a href="https://github.com/VISIALIS/alter/releases/latest" class="link-action">Télécharger pour Desktop</a>
                         <a href="https://github.com/VISIALIS/alter/issues" class="link-action">Devenir Beta Testeur Mobile</a>

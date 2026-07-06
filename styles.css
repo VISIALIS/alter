@@ -319,6 +319,62 @@ body {
     color: #10B981;
 }
 
+.action-with-qr {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.action-with-qr .btn {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 0; /* Override any existing bottom margin */
+}
+
+.qr-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.qr-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.qr-popup {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: #000;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    z-index: 100;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.qr-popup.visible {
+    display: block;
+}
+
+.qr-popup img {
+    background: white;
+    padding: 4px;
+    border-radius: 4px;
+    display: block;
+}
+
 .profile-visual {
     flex: 1 1 400px;
     display: flex;
