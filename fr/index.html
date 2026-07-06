@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alter — Intelligence d'adresses EVM multi-chaînes</title>
+    <meta name="description" content="Alter est un outil respectueux de la vie privée pour décoder et classifier les adresses EVM. Disponible sur Web, CLI, Desktop et Serveur MCP.">
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Alter - Identificateur d'adresses EVM">
+    <meta property="og:description" content="Décodez et classifiez instantanément n'importe quelle adresse EVM sans aucun traqueur.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alter-evm.com/fr/">
+    
+    <link rel="canonical" href="https://www.alter-evm.com/fr/">
+    <link rel="alternate" hreflang="en" href="https://www.alter-evm.com/">
+    <link rel="alternate" hreflang="fr" href="https://www.alter-evm.com/fr/">
+    <link rel="alternate" hreflang="es" href="https://www.alter-evm.com/es/">
+    <link rel="alternate" hreflang="x-default" href="https://www.alter-evm.com/">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#0F172A">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Alt<sup>er</sup></div>
+        <div class="lang-switcher">
+            <a href="/" aria-label="English">EN</a>
+            <a href="/fr/" class="active" aria-label="Français">FR</a>
+            <a href="/es/" aria-label="Español">ES</a>
+        </div>
+    </nav>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Identifiez n'importe quelle adresse EVM <span class="highlight">instantanément.</span></h1>
+            <p class="subtitle">Portefeuilles, jetons, contrats — chaque classification est adossée à des preuves on-chain. Aucun traqueur, aucun intermédiaire.</p>
+            <div class="cta-group">
+                <a href="https://app.alter-evm.com/" class="btn btn-primary">Ouvrir l'App Web</a>
+                <a href="#platforms" class="btn btn-secondary">Voir les Applications</a>
+            </div>
+            <figure class="hero-example" aria-label="Exemple : Alter identifie l'adresse du contrat USDT">
+                <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
+                <div class="example-proof-line" aria-hidden="true"></div>
+                <figcaption class="example-result"><strong>Tether USD</strong> · jeton ERC-20 · Ethereum — vérifié on-chain</figcaption>
+            </figure>
+        </div>
+    </header>
+
+    
+    <section id="profiles" class="profiles-section">
+        <h2 class="section-title">Pensé pour votre flux de travail</h2>
+        <p class="section-subtitle">Alter s'adapte à votre profil technique, de l'interface Web à l'API programmatique.</p>
+
+        <!-- Profil Utilisateur -->
+        <div class="profile-block">
+            <div class="profile-info">
+                <h3>Pour les utilisateurs et analystes</h3>
+                <p>Vérifiez n'importe quelle adresse instantanément. Disponible sur Web, Desktop et Mobile.</p>
+                <div class="use-cases">
+                    <h4>Cas d'usage :</h4>
+                    <ul>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Vérifier l'authenticité d'un jeton avant un swap.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Comprendre le rôle d'un contrat DeFi.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Auditer les permissions de votre portefeuille.</li>
+                    </ul>
+                </div>
+                <div class="profile-actions">
+                    <a href="https://app.alter-evm.com/" class="btn btn-primary">Ouvrir l'application Web</a>
+                    <div class="profile-links">
+                        <a href="https://github.com/VISIALIS/alter/releases/latest" class="link-action">Télécharger pour Desktop</a>
+                        <a href="https://github.com/VISIALIS/alter/issues" class="link-action">Devenir Beta Testeur Mobile</a>
+                    </div>
+                    <div class="platform-badges mt-2">
+                        <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> macOS</span>
+                        <span class="badge"><svg viewBox="0 0 448 512" width="12" height="12" fill="currentColor"><path d="M0 93.2l183.6-25.3v177.4H0V93.2zm0 325.6l183.6 25.3V268.4H0v150.4zm203.8 28L448 480V268.4H203.8v178.4zm0-380.6v180.1H448V32L203.8 66.2z"/></svg> Windows</span>
+                        <span class="badge"><svg viewBox="0 0 448 512" width="12" height="12" fill="currentColor"><path d="M220.8 123.3c1.1 0 2.2 0 3.3.1-23.7-56.2-76.3-52.2-76.3-52.2-46.7 4.1-41.1 63.6-41.1 63.6 5.5 35 44.2 44.2 44.2 44.2 3.1 1.1 4.3-1.1 4.3-1.1 8.8-13.2 21.9-25.4 39.9-39.7-2 16.2 3.8 28.5 6.3 33.6 5.5 11 10.9 23 15.3 35.5 12.6-16.1 23.3-36.4 25.4-60.6-5.8 4.6-12.8 8.1-20.3 10.3 3-5.5 3.3-13.6-1-23.7zm196.4 153.4c-4.4-43.9-36.3-70.3-64.8-82.6 15.3-26.6 24.3-54.5 24.3-79.6 0-71.1-42.3-114.5-103.5-114.5-18.7 0-35.3 5-50.5 15.3l1.8-6.1c11.3-43.4-3.5-68.4-5.3-71.3-3.6-5.8-13-14.8-28.5-14.8-13.6 0-24.8 7.3-30 19-14.5 31.8-8.5 73.1 10.5 106.3-23.8 11.8-39.8 33-39.8 56.1 0 18.6 6.1 36.3 17.6 51.3-13.2 7-26 15.3-37.1 24.5-23.8 19.3-34 40.5-34 54.3 0 17.1 12.3 34.3 37.8 38.3 19 3.5 34.1 3.5 40.8 3.5 7.1 0 13.3-3.8 17.8-10.8 9.3-15 15.3-43.6 26.5-62.9 8.5 19.3 22.8 44.1 48 57.8 24.8 13.5 50.1 21.3 75.3 21.3 28.3 0 49.3-7.5 49.3-16.3 0-6.1-4.6-14-11.8-15.5-23.8-5-39.3-17.3-46.5-25.5 45.4-8.1 82.1-42.9 91.5-87.3zm-51.5 51.5c-43.4 13.3-84 8.5-121.5 8.5-26 0-47.5-30-58-45.5-17.3 30-41.8 54-85 64.8 25.8-30.8 25.8-68.5 25.8-68.5 0-31.5-23.5-60.8-51.5-74.8-7-3.5-27.5-13.8-27.5-35.3 0-11.5 8.8-23.5 17.5-23.5 6 0 12.3 2 15.3 5 4.3 4.3 2.8 12.8 2.8 12.8s-3.5 20 18.3 25.3c21.8 5.3 44-12.8 44-33.8 0-19.3-15.8-29.3-15.8-29.3s-14.8-8.8-14.8-18.8c0-8.8 6.5-18.5 13-24.8 13.5-13.3 32-15 48.3-8.8 16.3 6.3 25.8 20.3 31 34.5 15.5-26 40.8-40.3 71.3-40.3 32.3 0 54.5 20.5 54.5 50.8 0 19.8-15 46.5-28.5 61.3-13.3 15-28.5 17.3-28.5 17.3s-19 2-25.3-6.5c-6.3-8.5-6.5-18.5-6.5-18.5s-.8-24.3 11-30.3c11.5-6.3 25.8-.3 25.8-.3s13.3 4.3 13.3-3.3c0-10.8-10.8-13.5-20.8-13.5-31.3 0-51 40-51 40s-6.3 11.5-10 11.5c-3.8 0-6-10-6-10s-5-26.5-21-41.3c14 3 24 16 24 16s8.3 11.8 16 11.8c7.5 0 18.5-7 18.5-20.8 0-11-7.8-22-26-26s-38.3.5-49 10.3c-11 9.8-16.5 24.3-16.5 24.3s-10.5 25.3 0 49c10 23 25.5 35 44 35 18.5 0 35.8-10.5 45.3-21 9.3-10.5 21-25.8 35.3-25.8 14 0 20 16 20 16s6.8 22 28.3 22c21.8 0 45.3-25.5 45.3-25.5s9-10 16.8-5c7.8 5 9.3 16.3 9.3 16.3s1.5 22.3-15.5 43c-16.8 20.3-40.5 31.8-61.5 31.8z"/></svg> Linux</span>
+                        <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> iOS</span>
+                        <span class="badge"><svg viewBox="0 0 576 512" width="12" height="12" fill="currentColor"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10h-.05l-48.54 84.07a283.84 283.84 0 0 0-246.51 0l-48.54-84.11a10 10 0 1 0-17.3 10l47.94 83C64.53 202.22 8.24 285.55 0 384h576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg> Android</span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-visual">
+                <!-- Espace réservé pour visual application web -->
+            </div>
+        </div>
+
+        <!-- Profil Développeur -->
+        <div class="profile-block reverse">
+            <div class="profile-info">
+                <h3>Pour les développeurs Web3</h3>
+                <p>Intégrez l'intelligence on-chain directement dans votre terminal et vos scripts.</p>
+                <div class="use-cases">
+                    <h4>Cas d'usage :</h4>
+                    <ul>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Déboguer des déploiements de contrats.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automatiser la classification d'adresses en masse.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Intégrer la vérification dans vos scripts CI/CD.</li>
+                    </ul>
+                </div>
+                <div class="profile-actions">
+                    <div class="install-command">
+                        <code>curl -fsSL https://raw.githubusercontent.com/VISIALIS/alter/main/install.sh | bash</code>
+                    </div>
+                    <p class="platform-note">Aussi via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a> ou <a href="https://github.com/VISIALIS/alter/releases/latest">.exe Windows</a></p>
+                </div>
+            </div>
+            <div class="profile-visual">
+                <div class="code-block">
+                    <div class="code-header">Terminal</div>
+                    <pre><code>$ alter inspect 0xdAC17F...
+<span style="color:#A5B4FC">[Tether USD]</span> ERC-20 Token
+Chain: Ethereum Mainnet
+Status: Verified On-Chain</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profil AI Agent -->
+        <div class="profile-block">
+            <div class="profile-info">
+                <h3>Pour les opérateurs d'Agents IA</h3>
+                <p>Donnez à votre assistant IA (Claude, Cursor, Windsurf) la capacité de lire la blockchain via le protocole MCP.</p>
+                <div class="use-cases">
+                    <h4>Cas d'usage :</h4>
+                    <ul>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Demander à votre IA d'analyser un portfolio.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Laisser l'agent trouver et lire l'ABI d'un contrat.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automatiser vos recherches en langage naturel.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-visual">
+                <div class="code-block mcp-config-block">
+                    <div class="code-header">Configuration Client MCP (mcp.json)</div>
+                    <pre><code>{
+  "mcpServers": {
+    "alter": {
+      "command": "alter-mcp",
+      "args": []
+    }
+  }
+}</code></pre>
+                </div>
+                <p class="platform-note"><a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">Guide de configuration MCP</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Confidentialité d'abord</h3>
+            <p>Aucun traqueur, aucune analytique, aucun intermédiaire : vos requêtes vont directement aux nœuds RPC publics.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Preuve on-chain</h3>
+            <p>Chaque classification s'appuie sur des faits on-chain vérifiables — pas des listes de noms ni des étiquettes tierces.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Omni-Plateforme</h3>
+            <p>Une expérience fluide sur Web, Desktop, Terminal et Mobile — sur Ethereum, Gnosis et toute chaîne EVM.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 VISIALIS. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="https://github.com/VISIALIS/alter">Dépôt GitHub</a>
+                <a href="https://app.alter-evm.com/">App Web</a>
+                <a href="https://github.com/VISIALIS/alter/releases">Releases</a>
+                <a href="https://github.com/VISIALIS/homebrew-alter">Tap Homebrew</a>
+                <a href="https://github.com/VISIALIS/alter/issues">Signaler un problème</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
