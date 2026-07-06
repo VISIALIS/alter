@@ -36,8 +36,8 @@
             <h1>Identifica cualquier dirección EVM <span class="highlight">al instante.</span></h1>
             <p class="subtitle">Carteras, tokens, contratos: cada clasificación respaldada por evidencia on-chain. Sin rastreadores, sin intermediarios.</p>
             <div class="cta-group">
-                <a href="https://app.alter-evm.com/" class="btn btn-primary">Abrir Web App</a>
-                <a href="#platforms" class="btn btn-secondary">Ver las Aplicaciones</a>
+                <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Abrir Web App</a>
+                <a href="/get/" class="btn btn-secondary">Ver las Aplicaciones</a>
             </div>
             <figure class="hero-example" aria-label="Ejemplo: Alter identifica la dirección del contrato USDT">
                 <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
@@ -101,6 +101,9 @@
                 <div class="profile-actions">
                     <div class="install-command">
                         <code>curl -fsSL https://www.alter-evm.com/install.sh | bash</code>
+                        <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard" onclick="navigator.clipboard.writeText('curl -fsSL https://www.alter-evm.com/install.sh | bash'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
                     </div>
                     <p class="platform-note">También vía <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a> o <a href="https://github.com/VISIALIS/alter/releases/latest">Windows .exe</a></p>
                 </div>

@@ -283,7 +283,10 @@ body {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     margin-bottom: 1rem;
-    overflow-x: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .install-command code {
@@ -291,6 +294,29 @@ body {
     color: #A5B4FC;
     font-size: 0.9rem;
     white-space: nowrap;
+    overflow-x: auto;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.copy-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--border-color);
+}
+
+.copy-btn.copied {
+    color: #10B981;
 }
 
 .profile-visual {
