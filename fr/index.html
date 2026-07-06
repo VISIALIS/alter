@@ -20,6 +20,8 @@
     <meta name="theme-color" content="#0F172A">
 
     <link rel="stylesheet" href="/styles.css?v=2">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({ startOnLoad: true });</script>
 </head>
 <body>
     <nav class="navbar">
@@ -33,8 +35,8 @@
     
     <header class="hero">
         <div class="hero-content">
-            <h1>Identifiez n'importe quelle adresse EVM <span class="highlight">instantanément.</span></h1>
-            <p class="subtitle">Portefeuilles, jetons, contrats — chaque classification est adossée à des preuves on-chain. Aucun traqueur, aucun intermédiaire.</p>
+            <h1>Ce que la blockchain dit vraiment.</h1>
+            <p class="subtitle">Plus clair. Plus sûr. Vérifié par vous-même sur un explorateur.</p>
             <div class="cta-group">
                 <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Ouvrir l'App Web</a>
                 <a href="/get/" class="btn btn-secondary">Voir les Applications</a>
@@ -46,6 +48,34 @@
             </figure>
         </div>
     </header>
+
+    <!-- Section Visuels : facile à vérifier soi-même sur la blockchain -->
+    <section class="visuals-section" style="max-width: 960px; margin: 2rem auto; padding: 0 1rem;">
+        <h2 style="text-align: center; font-size: 1.8rem; margin-bottom: 0.5rem;">Alter lit directement la blockchain (et vous pouvez vérifier)</h2>
+        <p style="text-align: center; color: #64748b; margin-bottom: 1.5rem;">Alter ne s'appuie pas sur des bases de données tierces. Il lit les faits directement sur la blockchain via plusieurs chemins. Vous pouvez tout contrôler vous-même sur un explorateur public.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+            <!-- Graphe simplifié des points d'accès -->
+            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="margin-top: 0; font-size: 1.1rem;">Alter utilise plusieurs accès à la blockchain</h3>
+                <p style="font-size: 0.9rem; line-height: 1.4;">Au lieu d'un seul point (comme la plupart des outils), Alter répartit sur plusieurs accès par chaîne. C'est plus fiable et plus rapide.</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;"><strong>Vérifiez vous-même :</strong> copiez une adresse dans Alter, puis allez sur <a href="https://etherscan.io" target="_blank">etherscan.io</a> ou <a href="https://gnosisscan.io" target="_blank">gnosisscan.io</a>. Vous verrez les mêmes faits de base.</p>
+            </div>
+
+            <!-- Métaphore IKEA simplifiée et publique -->
+            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <h3 style="margin-top: 0; font-size: 1.1rem;">Comme un plan de montage IKEA</h3>
+                <p style="font-size: 0.9rem; line-height: 1.4;"><strong>Alter lit les contrats comme un plan de montage :</strong></p>
+                <ul style="font-size: 0.85rem; padding-left: 1.2rem; margin: 0.5rem 0;">
+                    <li>Il traduit les faits on-chain en actions claires (« Récupérer mon dépôt de garantie », « Emprunter »…).</li>
+                    <li>L’interface graphique vous montre directement le résultat monté, sans que vous ayez à décoder quoi que ce soit.</li>
+                </ul>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;"><strong>Tout est vérifiable :</strong> les données viennent de la blockchain publique. Allez sur un explorateur, vous verrez les mêmes informations de base qu'Alter utilise.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #64748b;">Alter se base uniquement sur des données on-chain lisibles par tout le monde. Copiez l'adresse USDT de l'exemple ci-dessus, allez sur Etherscan, et vous verrez les mêmes faits de base.</p>
+    </section>
 
     
     <section id="profiles" class="profiles-section">
@@ -197,8 +227,8 @@ TOKEN (1)
             <div class="feature-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
-            <h3>Preuve on-chain</h3>
-            <p>Chaque classification s'appuie sur des faits on-chain vérifiables — pas des listes de noms ni des étiquettes tierces.</p>
+            <h3>Preuve on-chain (vérifiable par vous)</h3>
+            <p>Chaque classification s'appuie uniquement sur des faits lisibles directement sur la blockchain publique. Copiez l'adresse dans Alter, puis allez sur Etherscan ou GnosisScan : vous verrez les mêmes informations de base.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">
