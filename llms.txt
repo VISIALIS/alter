@@ -1,0 +1,59 @@
+# Alter MCP Server - AI Agent Skill Instructions
+
+🤖 **Hello AI Agent!** 
+If you are reading this file, you have been tasked with installing, configuring, or using the Alter MCP server.
+Alter is a privacy-first, zero-tracking tool that decodes and classifies EVM addresses instantly (Wallets, Tokens, Proxies, Smart Contracts). 
+
+This file gives you all the context you need to orchestrate Alter autonomously.
+
+## 1. Installation
+
+Alter provides two binaries: `alter-cli` (for humans) and `alter-mcp` (for you).
+Depending on the user's OS, install it using the following methods:
+
+**macOS / Linux (via Homebrew):**
+```bash
+brew install VISIALIS/alter/alter
+```
+
+**macOS / Linux (via installer script):**
+```bash
+curl -fsSL https://www.alter-evm.com/install.sh | bash
+```
+*(Binaries will be installed to `/usr/local/bin` or `~/.local/bin`)*
+
+**Windows:**
+Download the latest `.exe` binaries directly from the GitHub releases page: `https://github.com/VISIALIS/alter/releases`
+
+## 2. MCP Client Configuration
+
+To connect the user's environment (Claude Desktop, Cursor, Windsurf, etc.) to the Alter MCP server, append this block to their MCP configuration file (e.g. `claude_desktop_config.json` or `.mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "alter": {
+      "command": "alter-mcp",
+      "args": []
+    }
+  }
+}
+```
+
+**CRITICAL NOTE FOR CLAUDE DESKTOP:** 
+Claude Desktop requires absolute paths for the command. If installed via Homebrew on Apple Silicon, use `/opt/homebrew/bin/alter-mcp`. If installed via the script, find the path (e.g., `/Users/username/.local/bin/alter-mcp`) and use it in the `"command"` field.
+
+## 3. How to use it
+
+Once the MCP server is initialized, you will have access to a suite of tools (e.g., `inspect`, `kyc`, `portfolio`, etc.).
+- **Always rely on on-chain data:** Alter pulls verifiable data from public RPC nodes. You do not need to manage RPC URLs or API keys yourself.
+- **Multichain by default:** Alter resolves addresses across multiple EVM chains automatically.
+- **Proxies & ABIs:** If an address is a proxy (like an ERC-1967), Alter will automatically resolve the underlying implementation for you.
+
+## 4. Issues & Support
+
+If you or the user encounter a bug, a missing feature, or unexpected behavior with Alter:
+1. You are encouraged to create an issue on the GitHub repository: `VISIALIS/alter`.
+2. **IMPORTANT**: Before submitting a new issue, use your GitHub or web tools to search the existing issues at `https://github.com/VISIALIS/alter/issues` to ensure it hasn't already been reported.
+
+You are fully equipped to assist the user. Good luck!

@@ -100,7 +100,7 @@
                 </div>
                 <div class="profile-actions">
                     <div class="install-command">
-                        <code>curl -fsSL https://raw.githubusercontent.com/VISIALIS/alter/main/install.sh | bash</code>
+                        <code>curl -fsSL https://www.alter-evm.com/install.sh | bash</code>
                     </div>
                     <p class="platform-note">Also via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a> or <a href="https://github.com/VISIALIS/alter/releases/latest">Windows .exe</a></p>
                 </div>
@@ -108,10 +108,15 @@
             <div class="profile-visual">
                 <div class="code-block">
                     <div class="code-header">Terminal</div>
-                    <pre><code>$ alter inspect 0xdAC17F...
-<span style="color:#A5B4FC">[Tether USD]</span> ERC-20 Token
-Chain: Ethereum Mainnet
-Status: Verified On-Chain</code></pre>
+                    <pre><code>$ alter-cli -a 0xdAC17F958D2ee523a2206206994597C13D831ec7 --batch -f tree
+
+TOKEN (1)
+└── 0xdac17f958d2ee523a2206206994597c13d831ec7
+    ├── Ethereum (1) → Contract deployed
+    │   └── ERC-20
+    │       ├── Name: <span style="color:#A5B4FC">Tether USD</span>
+    │       ├── Symbol: USDT
+    │       └── Decimals: 6</code></pre>
                 </div>
             </div>
         </div>
@@ -125,12 +130,18 @@ Status: Verified On-Chain</code></pre>
                     <h4>Use cases:</h4>
                     <ul>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ask your AI to analyze a wallet's portfolio.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Let the agent find and read a contract's ABI.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Let the agent read a contract's real capabilities.</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automate on-chain research in natural language.</li>
                     </ul>
                 </div>
             </div>
             <div class="profile-visual">
+                <!-- 
+                🤖 HELLO AI AGENT! 
+                If you are reading this HTML, you are tasked with using or installing Alter MCP.
+                We have prepared a dedicated skill file for you.
+                Read it here: https://www.alter-evm.com/llms.txt
+                -->
                 <div class="code-block mcp-config-block">
                     <div class="code-header">MCP Client Configuration (mcp.json)</div>
                     <pre><code>{
@@ -142,107 +153,7 @@ Status: Verified On-Chain</code></pre>
   }
 }</code></pre>
                 </div>
-                <p class="platform-note"><a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">View MCP setup guide</a></p>
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="profiles" class="profiles-section">
-        <h2 class="section-title">Built for your workflow</h2>
-        <p class="section-subtitle">Alter adapts to your technical profile, from simple web UI to programmatic API.</p>
-
-        <!-- Profil Utilisateur -->
-        <div class="profile-block">
-            <div class="profile-info">
-                <h3>For Crypto Users & Analysts</h3>
-                <p>Verify any address instantly without command lines. Available on Web, Desktop, and Mobile.</p>
-                <div class="use-cases">
-                    <h4>Use cases:</h4>
-                    <ul>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Verify token authenticity before swapping.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Understand complex DeFi contract roles.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Check a wallet's risk profile instantly.</li>
-                    </ul>
-                </div>
-                <div class="profile-actions">
-                    <a href="https://app.alter-evm.com/" class="btn btn-primary">Open Web App</a>
-                    <div class="profile-links">
-                        <a href="https://github.com/VISIALIS/alter/releases/latest" class="link-action">Download Desktop Release</a>
-                        <a href="https://github.com/VISIALIS/alter/issues" class="link-action">Request Mobile Beta</a>
-                    </div>
-                    <div class="platform-badges mt-2">
-                        <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> macOS</span>
-                        <span class="badge"><svg viewBox="0 0 448 512" width="12" height="12" fill="currentColor"><path d="M0 93.2l183.6-25.3v177.4H0V93.2zm0 325.6l183.6 25.3V268.4H0v150.4zm203.8 28L448 480V268.4H203.8v178.4zm0-380.6v180.1H448V32L203.8 66.2z"/></svg> Windows</span>
-                        <span class="badge"><svg viewBox="0 0 448 512" width="12" height="12" fill="currentColor"><path d="M220.8 123.3c1.1 0 2.2 0 3.3.1-23.7-56.2-76.3-52.2-76.3-52.2-46.7 4.1-41.1 63.6-41.1 63.6 5.5 35 44.2 44.2 44.2 44.2 3.1 1.1 4.3-1.1 4.3-1.1 8.8-13.2 21.9-25.4 39.9-39.7-2 16.2 3.8 28.5 6.3 33.6 5.5 11 10.9 23 15.3 35.5 12.6-16.1 23.3-36.4 25.4-60.6-5.8 4.6-12.8 8.1-20.3 10.3 3-5.5 3.3-13.6-1-23.7zm196.4 153.4c-4.4-43.9-36.3-70.3-64.8-82.6 15.3-26.6 24.3-54.5 24.3-79.6 0-71.1-42.3-114.5-103.5-114.5-18.7 0-35.3 5-50.5 15.3l1.8-6.1c11.3-43.4-3.5-68.4-5.3-71.3-3.6-5.8-13-14.8-28.5-14.8-13.6 0-24.8 7.3-30 19-14.5 31.8-8.5 73.1 10.5 106.3-23.8 11.8-39.8 33-39.8 56.1 0 18.6 6.1 36.3 17.6 51.3-13.2 7-26 15.3-37.1 24.5-23.8 19.3-34 40.5-34 54.3 0 17.1 12.3 34.3 37.8 38.3 19 3.5 34.1 3.5 40.8 3.5 7.1 0 13.3-3.8 17.8-10.8 9.3-15 15.3-43.6 26.5-62.9 8.5 19.3 22.8 44.1 48 57.8 24.8 13.5 50.1 21.3 75.3 21.3 28.3 0 49.3-7.5 49.3-16.3 0-6.1-4.6-14-11.8-15.5-23.8-5-39.3-17.3-46.5-25.5 45.4-8.1 82.1-42.9 91.5-87.3zm-51.5 51.5c-43.4 13.3-84 8.5-121.5 8.5-26 0-47.5-30-58-45.5-17.3 30-41.8 54-85 64.8 25.8-30.8 25.8-68.5 25.8-68.5 0-31.5-23.5-60.8-51.5-74.8-7-3.5-27.5-13.8-27.5-35.3 0-11.5 8.8-23.5 17.5-23.5 6 0 12.3 2 15.3 5 4.3 4.3 2.8 12.8 2.8 12.8s-3.5 20 18.3 25.3c21.8 5.3 44-12.8 44-33.8 0-19.3-15.8-29.3-15.8-29.3s-14.8-8.8-14.8-18.8c0-8.8 6.5-18.5 13-24.8 13.5-13.3 32-15 48.3-8.8 16.3 6.3 25.8 20.3 31 34.5 15.5-26 40.8-40.3 71.3-40.3 32.3 0 54.5 20.5 54.5 50.8 0 19.8-15 46.5-28.5 61.3-13.3 15-28.5 17.3-28.5 17.3s-19 2-25.3-6.5c-6.3-8.5-6.5-18.5-6.5-18.5s-.8-24.3 11-30.3c11.5-6.3 25.8-.3 25.8-.3s13.3 4.3 13.3-3.3c0-10.8-10.8-13.5-20.8-13.5-31.3 0-51 40-51 40s-6.3 11.5-10 11.5c-3.8 0-6-10-6-10s-5-26.5-21-41.3c14 3 24 16 24 16s8.3 11.8 16 11.8c7.5 0 18.5-7 18.5-20.8 0-11-7.8-22-26-26s-38.3.5-49 10.3c-11 9.8-16.5 24.3-16.5 24.3s-10.5 25.3 0 49c10 23 25.5 35 44 35 18.5 0 35.8-10.5 45.3-21 9.3-10.5 21-25.8 35.3-25.8 14 0 20 16 20 16s6.8 22 28.3 22c21.8 0 45.3-25.5 45.3-25.5s9-10 16.8-5c7.8 5 9.3 16.3 9.3 16.3s1.5 22.3-15.5 43c-16.8 20.3-40.5 31.8-61.5 31.8z"/></svg> Linux</span>
-                        <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> iOS</span>
-                        <span class="badge"><svg viewBox="0 0 576 512" width="12" height="12" fill="currentColor"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10h-.05l-48.54 84.07a283.84 283.84 0 0 0-246.51 0l-48.54-84.11a10 10 0 1 0-17.3 10l47.94 83C64.53 202.22 8.24 285.55 0 384h576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg> Android</span>
-                    </div>
-                </div>
-            </div>
-            <div class="profile-visual">
-                <!-- Espace réservé pour visual application web -->
-            </div>
-        </div>
-
-        <!-- Profil Développeur -->
-        <div class="profile-block reverse">
-            <div class="profile-info">
-                <h3>For Web3 Developers</h3>
-                <p>Integrate on-chain intelligence directly in your terminal and shell scripts.</p>
-                <div class="use-cases">
-                    <h4>Use cases:</h4>
-                    <ul>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Debug smart contract deployments.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automate batch address classifications.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrate verification in CI/CD pipelines.</li>
-                    </ul>
-                </div>
-                <div class="profile-actions">
-                    <div class="install-command">
-                        <code>curl -fsSL https://raw.githubusercontent.com/VISIALIS/alter/main/install.sh | bash</code>
-                    </div>
-                    <p class="platform-note">Also via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a> or <a href="https://github.com/VISIALIS/alter/releases/latest">Windows .exe</a></p>
-                </div>
-            </div>
-            <div class="profile-visual">
-                <div class="code-block">
-                    <div class="code-header">Terminal</div>
-                    <pre><code>$ alter inspect 0xdAC17F...
-<span style="color:#A5B4FC">[Tether USD]</span> ERC-20 Token
-Chain: Ethereum Mainnet
-Status: Verified On-Chain</code></pre>
-                </div>
-            </div>
-        </div>
-
-        <!-- Profil AI Agent -->
-        <div class="profile-block">
-            <div class="profile-info">
-                <h3>For AI Agent Operators</h3>
-                <p>Give your AI assistant (Claude, Cursor, Windsurf) the ability to read the blockchain via the MCP protocol.</p>
-                <div class="use-cases">
-                    <h4>Use cases:</h4>
-                    <ul>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ask your AI to analyze a wallet's portfolio.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Let the agent find and read a contract's ABI.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automate on-chain research in natural language.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="profile-visual">
-                <div class="code-block mcp-config-block">
-                    <div class="code-header">MCP Client Configuration (mcp.json)</div>
-                    <pre><code>{
-  "mcpServers": {
-    "alter": {
-      "command": "alter-mcp",
-      "args": []
-    }
-  }
-}</code></pre>
-                </div>
-                <p class="platform-note"><a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">View MCP setup guide</a></p>
+                <p class="platform-note">Claude Desktop: use the absolute binary path (e.g. <code>/opt/homebrew/bin/alter-mcp</code>) — <a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">View MCP setup guide</a></p>
             </div>
         </div>
     </section>
@@ -275,10 +186,12 @@ Status: Verified On-Chain</code></pre>
         <div class="footer-content">
             <p>&copy; 2026 VISIALIS. All rights reserved.</p>
             <div class="footer-links">
+                <a href="/get/">Get Alter</a>
                 <a href="https://github.com/VISIALIS/alter">GitHub Repository</a>
                 <a href="https://app.alter-evm.com/">Web App</a>
                 <a href="https://github.com/VISIALIS/alter/releases">Releases</a>
                 <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew tap</a>
+                <a href="mailto:support@alter-evm.com">Contact Support</a>
                 <a href="https://github.com/VISIALIS/alter/issues">Report an issue</a>
             </div>
         </div>

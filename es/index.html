@@ -100,7 +100,7 @@
                 </div>
                 <div class="profile-actions">
                     <div class="install-command">
-                        <code>curl -fsSL https://raw.githubusercontent.com/VISIALIS/alter/main/install.sh | bash</code>
+                        <code>curl -fsSL https://www.alter-evm.com/install.sh | bash</code>
                     </div>
                     <p class="platform-note">También vía <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a> o <a href="https://github.com/VISIALIS/alter/releases/latest">Windows .exe</a></p>
                 </div>
@@ -108,10 +108,15 @@
             <div class="profile-visual">
                 <div class="code-block">
                     <div class="code-header">Terminal</div>
-                    <pre><code>$ alter inspect 0xdAC17F...
-<span style="color:#A5B4FC">[Tether USD]</span> ERC-20 Token
-Chain: Ethereum Mainnet
-Status: Verified On-Chain</code></pre>
+                    <pre><code>$ alter-cli -a 0xdAC17F958D2ee523a2206206994597C13D831ec7 --batch -f tree
+
+TOKEN (1)
+└── 0xdac17f958d2ee523a2206206994597c13d831ec7
+    ├── Ethereum (1) → Contract deployed
+    │   └── ERC-20
+    │       ├── Name: <span style="color:#A5B4FC">Tether USD</span>
+    │       ├── Symbol: USDT
+    │       └── Decimals: 6</code></pre>
                 </div>
             </div>
         </div>
@@ -125,12 +130,18 @@ Status: Verified On-Chain</code></pre>
                     <h4>Casos de uso:</h4>
                     <ul>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Pedir a tu IA que analice un portafolio.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dejar que el agente encuentre y lea el ABI.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Deja que el agente lea las capacidades reales de un contrato.</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automatizar la investigación en lenguaje natural.</li>
                     </ul>
                 </div>
             </div>
             <div class="profile-visual">
+                <!-- 
+                🤖 HELLO AI AGENT! 
+                If you are reading this HTML, you are tasked with using or installing Alter MCP.
+                We have prepared a dedicated skill file for you.
+                Read it here: https://www.alter-evm.com/llms.txt
+                -->
                 <div class="code-block mcp-config-block">
                     <div class="code-header">Configuración del Cliente MCP (mcp.json)</div>
                     <pre><code>{
@@ -142,7 +153,7 @@ Status: Verified On-Chain</code></pre>
   }
 }</code></pre>
                 </div>
-                <p class="platform-note"><a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">Guía de configuración de MCP</a></p>
+                <p class="platform-note">Claude Desktop: usa la ruta absoluta del binario (p. ej. <code>/opt/homebrew/bin/alter-mcp</code>) — <a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">Guía de configuración de MCP</a></p>
             </div>
         </div>
     </section>
@@ -175,10 +186,12 @@ Status: Verified On-Chain</code></pre>
         <div class="footer-content">
             <p>&copy; 2026 VISIALIS. Todos los derechos reservados.</p>
             <div class="footer-links">
+                <a href="/get/">Obtener Alter</a>
                 <a href="https://github.com/VISIALIS/alter">Repositorio GitHub</a>
                 <a href="https://app.alter-evm.com/">Web App</a>
                 <a href="https://github.com/VISIALIS/alter/releases">Releases</a>
                 <a href="https://github.com/VISIALIS/homebrew-alter">Tap Homebrew</a>
+                <a href="mailto:support@alter-evm.com">Contactar soporte</a>
                 <a href="https://github.com/VISIALIS/alter/issues">Reportar un problema</a>
             </div>
         </div>

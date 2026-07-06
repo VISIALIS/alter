@@ -476,3 +476,88 @@ a:focus-visible,
         transform: none;
     }
 }
+
+/* Page /get — canaux d'acquisition */
+.get-hero {
+    padding-bottom: 1rem;
+}
+
+.get-section {
+    padding-top: 1rem;
+}
+
+.get-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.get-card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.get-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
+.get-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.get-card p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin-bottom: 0.8rem;
+}
+
+.get-card code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.82rem;
+    color: #A5B4FC;
+    word-break: break-all;
+}
+
+.get-cta {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.get-highlight {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 18px rgba(59, 130, 246, 0.25);
+}
+
+.get-card-beta {
+    border-style: dashed;
+}
+
+/* Tuile QR — fond blanc pour lisibilité écran et print */
+.qr-tile-wrap {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.qr-tile {
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 10px;
+    line-height: 0;
+}
+
+@media (max-width: 640px) {
+    .qr-tile-wrap {
+        display: none;
+    }
+}

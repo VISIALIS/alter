@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Alter — Multi-chain EVM address intelligence</title>
+    <meta name="description" content="Get Alter on your platform: Web app, macOS, Windows, Linux — iOS and Android in private beta.">
+    <meta property="og:title" content="Get Alter">
+    <meta property="og:description" content="One address to install Alter on any platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alter-evm.com/get/">
+    <link rel="canonical" href="https://www.alter-evm.com/get/">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#0F172A">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="/" style="text-decoration:none">Alt<sup>er</sup></a>
+        <div class="lang-switcher">
+            <a href="/" aria-label="Back to site">← alter-evm.com</a>
+        </div>
+    </nav>
+
+    <header class="hero get-hero">
+        <div class="hero-content">
+            <h1>Get <span class="highlight">Alter.</span></h1>
+            <p class="subtitle" id="detected-hint">Pick your platform below.</p>
+        </div>
+    </header>
+
+    <section class="platforms-section get-section" aria-label="Installation channels">
+        <div class="get-grid">
+            <a class="get-card" id="get-web" href="https://app.alter-evm.com/">
+                <h3>Web App</h3>
+                <p>No install — works on every device, right now.</p>
+                <span class="get-cta">Open app.alter-evm.com →</span>
+            </a>
+
+            <a class="get-card" id="get-macos" href="https://github.com/VISIALIS/alter/releases/latest">
+                <h3>macOS</h3>
+                <p>Notarized app (Apple Silicon &amp; Intel), or <code>brew install --cask alter</code>.</p>
+                <span class="get-cta">Download from Releases →</span>
+            </a>
+
+            <a class="get-card" id="get-windows" href="https://github.com/VISIALIS/alter/releases/latest">
+                <h3>Windows</h3>
+                <p>Desktop app for x64 and ARM64.</p>
+                <span class="get-cta">Download from Releases →</span>
+            </a>
+
+            <a class="get-card" id="get-linux" href="https://github.com/VISIALIS/alter/releases/latest">
+                <h3>Linux</h3>
+                <p>Desktop app, or CLI via <code>curl -fsSL https://www.alter-evm.com/install.sh | bash</code>.</p>
+                <span class="get-cta">Download from Releases →</span>
+            </a>
+
+            <a class="get-card get-card-beta" id="get-mobile" href="https://github.com/VISIALIS/alter/issues">
+                <h3>iOS &amp; Android</h3>
+                <p>Native apps are in <strong>private beta</strong>. Meanwhile, the Web App works great on mobile.</p>
+                <span class="get-cta">Request beta access →</span>
+            </a>
+        </div>
+
+        <div class="qr-tile-wrap" id="qr-block">
+            <div class="qr-tile">
+                <img src="/qr-get.svg" width="132" height="132" alt="QR code linking to www.alter-evm.com/get">
+            </div>
+            <p class="platform-note">On your phone? Scan to open this page.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 VISIALIS. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/">alter-evm.com</a>
+                <a href="https://github.com/VISIALIS/alter/releases">Releases</a>
+                <a href="mailto:support@alter-evm.com">Contact Support</a>
+                <a href="https://github.com/VISIALIS/alter/issues">Report an issue</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Amélioration progressive (ADR-0100 §2) : sans JavaScript, la liste
+    // complète reste utilisable telle quelle. Avec JavaScript, on met en
+    // avant le canal de la plateforme détectée — sans redirection forcée
+    // tant que la cible mobile principale est l'application Web (les
+    // stores publics apporteront la redirection automatique).
+    (function () {
+        var ua = navigator.userAgent;
+        var isIOS = /iPhone|iPad|iPod/.test(ua) || (ua.indexOf('Mac') !== -1 && 'ontouchend' in document);
+        var isAndroid = /Android/.test(ua);
+        var id, label;
+        if (isIOS || isAndroid) {
+            id = 'get-web';
+            label = (isIOS ? 'iOS' : 'Android') + ' detected — the Web App works right now. Native app: private beta below.';
+            var qr = document.getElementById('qr-block');
+            if (qr) { qr.style.display = 'none'; }
+        } else if (/Windows/.test(ua)) {
+            id = 'get-windows'; label = 'Windows detected.';
+        } else if (/Mac/.test(ua)) {
+            id = 'get-macos'; label = 'macOS detected.';
+        } else if (/Linux/.test(ua)) {
+            id = 'get-linux'; label = 'Linux detected.';
+        }
+        if (id) {
+            var card = document.getElementById(id);
+            if (card) {
+                card.classList.add('get-highlight');
+                card.parentNode.insertBefore(card, card.parentNode.firstChild);
+            }
+            document.getElementById('detected-hint').textContent = label;
+        }
+    })();
+    </script>
+</body>
+</html>
