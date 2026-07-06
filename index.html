@@ -49,33 +49,10 @@
         </div>
     </header>
 
-    <!-- Visuals: easy to verify yourself on public blockchain explorers -->
-    <section class="visuals-section" style="max-width: 960px; margin: 2rem auto; padding: 0 1rem;">
-        <h2 style="text-align: center; font-size: 1.5rem; margin-bottom: 0.5rem;">Verify yourself on the blockchain</h2>
-        <p style="text-align: center; color: #64748b; margin-bottom: 1.5rem;">Alter does not rely on third-party databases. It reads facts directly from the blockchain through multiple paths. You can verify everything yourself on a public explorer.</p>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-            <!-- Simplified access graph -->
-            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <h3 style="margin-top: 0; font-size: 1.1rem;">Alter uses multiple paths to the blockchain</h3>
-                <p style="font-size: 0.9rem; line-height: 1.4;">Instead of a single point (like most tools), Alter spreads requests across several access points per chain. It is more reliable and faster.</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;"><strong>Check yourself:</strong> copy an address into Alter, then open it on <a href="https://etherscan.io" target="_blank">etherscan.io</a> or <a href="https://gnosisscan.io" target="_blank">gnosisscan.io</a>. You will see the same basic facts.</p>
-            </div>
-
-            <!-- Simplified IKEA metaphor -->
-            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <h3 style="margin-top: 0; font-size: 1.1rem;">Like an IKEA assembly manual</h3>
-                <p style="font-size: 0.9rem; line-height: 1.4;"><strong>Alter reads contracts like an assembly plan:</strong></p>
-                <ul style="font-size: 0.85rem; padding-left: 1.2rem; margin: 0.5rem 0;">
-                    <li>It translates on-chain facts into clear actions (“Recover my collateral”, “Borrow”…).</li>
-                    <li>The graphical interface shows you the result ready-to-use, without you having to decode anything.</li>
-                </ul>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;"><strong>Everything is verifiable:</strong> the data comes from the public blockchain. Go to an explorer and you will see the same base information Alter uses.</p>
-            </div>
-        </div>
-
-        <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #64748b;">Alter is based only on on-chain data that everyone can read. Copy the USDT address from the example above, go to Etherscan, and you will see the same base facts.</p>
-    </section>
+    <div style="max-width: 620px; margin: 1.5rem auto 2.5rem; padding: 1rem 1.25rem; text-align: center; color: #64748b; font-size: 1rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+        Alter reads the facts <strong>directly from the blockchain</strong> (no third-party databases).<br>
+        You can verify everything yourself on <a href="https://etherscan.io" target="_blank" style="color: #a5b4fc;">Etherscan</a> or <a href="https://gnosisscan.io" target="_blank" style="color: #a5b4fc;">GnosisScan</a>.
+    </div>
 
     
     <section id="profiles" class="profiles-section">
