@@ -68,7 +68,7 @@
                 <div class="profile-actions">
                     <div class="action-with-qr">
                         <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Abrir Web App</a>
-                        <button class="qr-btn" aria-label="Mostrar Código QR" title="Escanear para abrir en móvil" onclick="this.nextElementSibling.classList.toggle('visible')">
+                        <button class="qr-btn" aria-label="Mostrar Código QR" title="Escanear para abrir en móvil" onclick="document.getElementById('qr-modal-app').classList.add('visible')">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="3" width="7" height="7"></rect>
                                 <rect x="14" y="3" width="7" height="7"></rect>
@@ -76,9 +76,6 @@
                                 <rect x="3" y="14" width="7" height="7"></rect>
                             </svg>
                         </button>
-                        <div class="qr-popup">
-                            <img src="/qr-app.svg" alt="Código QR para Web App" width="120" height="120">
-                        </div>
                     </div>
                     <div class="profile-links">
                         <a href="https://github.com/VISIALIS/alter/releases/latest" class="link-action">Descargar para Desktop</a>
@@ -212,5 +209,15 @@ TOKEN (1)
             </div>
         </div>
     </footer>
+    <div id="qr-modal-app" class="qr-modal" onclick="if(event.target === this) this.classList.remove('visible')">
+        <div class="qr-modal-content">
+            <button class="qr-modal-close" onclick="document.getElementById('qr-modal-app').classList.remove('visible')" aria-label="Cerrar Código QR">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Escanear para abrir la Web App</h3>
+            <img src="/qr-app.svg" alt="Código QR para Web App">
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">https://app.alter-evm.com/</p>
+        </div>
+    </div>
 </body>
 </html>
