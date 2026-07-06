@@ -2,7 +2,7 @@
 # Alter direct installer — CLI + MCP server (macOS / Linux).
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/VISIALIS/alter/main/install.sh | bash
+#   curl -fsSL https://www.alter-evm.com/install.sh | bash
 #
 # Options (environment variables):
 #   ALTER_INSTALL_DIR   Target directory (default: /usr/local/bin if writable, else ~/.local/bin)
