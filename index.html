@@ -117,13 +117,19 @@
                     </ul>
                 </div>
                 <div class="profile-actions">
-                    <div class="install-command">
+                    <div class="install-command" style="margin-bottom: 0.5rem;">
                         <code>curl -fsSL https://www.alter-evm.com/install.sh | bash</code>
                         <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard" onclick="navigator.clipboard.writeText('curl -fsSL https://www.alter-evm.com/install.sh | bash'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                         </button>
                     </div>
-                    <p class="platform-note">Also via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a> or <a href="https://github.com/VISIALIS/alter/releases/latest">Windows .exe</a></p>
+                    <div class="install-command">
+                        <code>iwr https://www.alter-evm.com/install.ps1 -useb | iex</code>
+                        <button class="copy-btn" aria-label="Copy Windows command" title="Copy to clipboard" onclick="navigator.clipboard.writeText('iwr https://www.alter-evm.com/install.ps1 -useb | iex'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
+                    </div>
+                    <p class="platform-note">Also via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a></p>
                 </div>
             </div>
             <div class="profile-visual">
