@@ -1,0 +1,347 @@
+--- /Users/visialis/Projets/phoenix_0/website/fr/index.html	2026-07-06 19:31:57
++++ /Users/visialis/Projets/phoenix_0/website/index.html	2026-07-06 19:31:42
+@@ -1,22 +1,22 @@
+ <!DOCTYPE html>
+-<html lang="fr">
++<html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Alter — Intelligence d'adresses EVM multi-chaînes</title>
+-    <meta name="description" content="Alter est un outil respectueux de la vie privée pour décoder et classifier les adresses EVM. Disponible sur Web, CLI, Desktop et Serveur MCP.">
+-    <!-- OpenGraph Meta Tags -->
+-    <meta property="og:title" content="Alter - Identificateur d'adresses EVM">
+-    <meta property="og:description" content="Décodez et classifiez instantanément n'importe quelle adresse EVM sans aucun traqueur.">
++    <title>Alter — Multi-chain EVM address intelligence</title>
++    <meta name="description" content="Alter is a privacy-first tool to decode and classify EVM addresses instantly. Available on Web, CLI, Desktop, and as an AI Agent MCP server.">
++    <!-- OpenGraph Meta Tags for Social Media -->
++    <meta property="og:title" content="Alter - EVM Address Identifier">
++    <meta property="og:description" content="Instantly decode and classify EVM addresses with zero tracking.">
+     <meta property="og:type" content="website">
+-    <meta property="og:url" content="https://www.alter-evm.com/fr/">
++    <meta property="og:url" content="https://www.alter-evm.com/">
+     
+-    <link rel="canonical" href="https://www.alter-evm.com/fr/">
++    <link rel="canonical" href="https://www.alter-evm.com/">
+     <link rel="alternate" hreflang="en" href="https://www.alter-evm.com/">
+     <link rel="alternate" hreflang="fr" href="https://www.alter-evm.com/fr/">
+     <link rel="alternate" hreflang="es" href="https://www.alter-evm.com/es/">
+     <link rel="alternate" hreflang="x-default" href="https://www.alter-evm.com/">
+-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
++    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+     <meta name="theme-color" content="#0F172A">
+ 
+     <link rel="stylesheet" href="/styles.css?v=2">
+@@ -27,48 +27,48 @@
+     <nav class="navbar">
+         <div class="logo">Alt<sup>er</sup></div>
+         <div class="lang-switcher">
+-            <a href="/" aria-label="English">EN</a>
+-            <a href="/fr/" class="active" aria-label="Français">FR</a>
++            <a href="/" class="active" aria-label="English">EN</a>
++            <a href="/fr/" aria-label="Français">FR</a>
+             <a href="/es/" aria-label="Español">ES</a>
+         </div>
+     </nav>
+     
+     <header class="hero">
+         <div class="hero-content">
+-            <h1>Ce que la blockchain dit vraiment.</h1>
+-            <p class="subtitle">Plus clair. Plus sûr. Vérifié par vous-même sur un explorateur.</p>
++            <h1>What the blockchain really says.</h1>
++            <p class="subtitle">Clearer. Safer. Verified by yourself on any explorer.</p>
+             <div class="cta-group">
+-                <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Ouvrir l'App Web</a>
+-                <a href="/get/" class="btn btn-secondary">Voir les Applications</a>
++                <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Open Web App</a>
++                <a href="/get/" class="btn btn-secondary">Download Desktop / CLI</a>
+             </div>
+-            <div class="hero-carousel" aria-live="polite" aria-label="Exemples d'adresses classifiées par Alter">
+-                <!-- Slide 1: USDT - Stablecoin de base -->
++            <div class="hero-carousel" aria-live="polite" aria-label="Examples of addresses classified by Alter">
++                <!-- Slide 1: USDT -->
+                 <div class="carousel-slide active">
+-                    <div class="use-case-label">Vérifier un stablecoin avant un swap</div>
++                    <div class="use-case-label">Verify a stablecoin before swapping</div>
+                     <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
+                     <div class="example-proof-line" aria-hidden="true"></div>
+-                    <div class="example-result"><strong>Tether USD</strong> · jeton ERC-20 · Ethereum — vérifié on-chain</div>
++                    <div class="example-result"><strong>Tether USD</strong> · ERC-20 token · Ethereum — verified on-chain</div>
+                 </div>
+                 <!-- Slide 2: Wallet KYC -->
+                 <div class="carousel-slide">
+-                    <div class="use-case-label">Connaître l'identifiant KYC d'un wallet</div>
++                    <div class="use-case-label">Find the KYC identity ID of a wallet</div>
+                     <code class="example-address">0x14cCD6FB7C6D5693969F38C8eF5C08d77d260Ce4</code>
+                     <div class="example-proof-line" aria-hidden="true"></div>
+-                    <div class="example-result"><strong>Portefeuille</strong> · ID KYC: 5288 (RealT) — Vérifié on-chain via Bridge Protocol</div>
++                    <div class="example-result"><strong>Wallet</strong> · KYC ID: 5288 (RealT) — Verified on-chain via Bridge Protocol</div>
+                 </div>
+                 <!-- Slide 3: Whitelisted Security Tokens -->
+                 <div class="carousel-slide">
+-                    <div class="use-case-label">Voir le nombre de Security Tokens whitelistés pour un wallet</div>
++                    <div class="use-case-label">See how many Security Tokens a wallet is whitelisted for</div>
+                     <code class="example-address">0x14cCD6FB7C6D5693969F38C8eF5C08d77d260Ce4</code>
+                     <div class="example-proof-line" aria-hidden="true"></div>
+-                    <div class="example-result"><strong>Portefeuille</strong> · Whitelisté pour 14 Security Tokens — Règles de conformité vérifiées on-chain</div>
++                    <div class="example-result"><strong>Wallet</strong> · Whitelisted for 14 Security Tokens — Compliance rules verified on-chain</div>
+                 </div>
+-                <!-- Slide 4: Dette + Health Factor (Aave) -->
++                <!-- Slide 4: Debt + Health Factor -->
+                 <div class="carousel-slide">
+-                    <div class="use-case-label">Surveiller la dette, le Health Factor et les taux d'intérêt d'un wallet</div>
++                    <div class="use-case-label">Monitor a wallet's debt, Health Factor, and interest rates</div>
+                     <code class="example-address">0x61e18b67a5e1fecc4745ead154419a2985fc0539</code>
+                     <div class="example-proof-line" aria-hidden="true"></div>
+-                    <div class="example-result"><strong>Portefeuille</strong> · Dette: 12 000 USDC · Health Factor: 1.15 · APY: 4.5% — Position Aave V3 en direct</div>
++                    <div class="example-result"><strong>Wallet</strong> · Debt: 12,000 USDC · Health Factor: 1.15 · APY: 4.5% — Live Aave V3 position</div>
+                 </div>
+             </div>
+ 
+@@ -117,33 +117,79 @@
+         </div>
+     </header>
+ 
+-    <div style="max-width: 620px; margin: 1.5rem auto 2.5rem; padding: 1rem 1.25rem; text-align: center; color: #64748b; font-size: 1rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+-        Alter lit les faits <strong>directement sur la blockchain</strong> (pas de bases tierces).<br>
+-        Vous pouvez tout vérifier vous-même sur <a href="https://etherscan.io" target="_blank" style="color: #a5b4fc;">Etherscan</a> ou <a href="https://gnosisscan.io" target="_blank" style="color: #a5b4fc;">GnosisScan</a>.
++    <div style="max-width: 620px; margin: 1.5rem auto 2.5rem; padding: 1rem 1.25rem; text-align: center; color: #64748b; font-size: 1rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(10px);">
++        Alter reads the facts <strong>directly from the blockchain</strong> (no third-party databases).<br>
++        You can verify everything yourself on <a href="https://etherscan.io" target="_blank" style="color: #a5b4fc;">Etherscan</a> or <a href="https://gnosisscan.io" target="_blank" style="color: #a5b4fc;">GnosisScan</a>.
+     </div>
+ 
+-    
++    <div class="supported-chains-marquee">
++        <div class="chains-track">
++            <span>Ethereum</span>
++            <span>Arbitrum</span>
++            <span>Optimism</span>
++            <span>Polygon</span>
++            <span>Base</span>
++            <span>Gnosis</span>
++            <span>Avalanche</span>
++            <span>BNB Chain</span>
++            <span>+ Any EVM</span>
++            <!-- Duplicate for infinite scroll -->
++            <span aria-hidden="true">Ethereum</span>
++            <span aria-hidden="true">Arbitrum</span>
++            <span aria-hidden="true">Optimism</span>
++            <span aria-hidden="true">Polygon</span>
++            <span aria-hidden="true">Base</span>
++            <span aria-hidden="true">Gnosis</span>
++            <span aria-hidden="true">Avalanche</span>
++            <span aria-hidden="true">BNB Chain</span>
++            <span aria-hidden="true">+ Any EVM</span>
++        </div>
++    </div>
++
++    <section class="how-it-works">
++        <h2 class="section-title">How it works</h2>
++        <div class="steps-container">
++            <div class="step-card">
++                <div class="step-number">1</div>
++                <h3>Input</h3>
++                <p>Provide an EVM address or query</p>
++            </div>
++            <div class="step-arrow"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></div>
++            <div class="step-card">
++                <div class="step-number">2</div>
++                <h3>Process</h3>
++                <p>Alter queries public RPCs directly (Privacy First)</p>
++            </div>
++            <div class="step-arrow"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></div>
++            <div class="step-card">
++                <div class="step-number">3</div>
++                <h3>Output</h3>
++                <p>Get clear, human-readable, and verifiable facts</p>
++            </div>
++        </div>
++    </section>
++
+     <section id="profiles" class="profiles-section">
+-        <h2 class="section-title">Pensé pour votre flux de travail</h2>
+-        <p class="section-subtitle">Alter s'adapte à votre profil technique, de l'interface Web à l'API programmatique.</p>
++        <h2 class="section-title">Built for your workflow</h2>
++        <p class="section-subtitle">Alter adapts to your technical profile, from simple web UI to programmatic API.</p>
+ 
+         <!-- Profil Utilisateur -->
+         <div class="profile-block">
+             <div class="profile-info">
+-                <h3>Pour les utilisateurs et analystes</h3>
+-                <p>Vérifiez n'importe quelle adresse instantanément. Disponible sur Web, Desktop et Mobile.</p>
++                <h3>For Crypto Users & Analysts</h3>
++                <p>Verify any address instantly without command lines. Available on Web, Desktop, and Mobile.</p>
+                 <div class="use-cases">
+-                    <h4>Cas d'usage :</h4>
++                    <h4>Use cases:</h4>
+                     <ul>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Vérifier l'authenticité d'un jeton avant un swap.</li>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Comprendre le rôle d'un contrat DeFi.</li>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Auditer les permissions de votre portefeuille.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Verify token authenticity before swapping.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Understand complex DeFi contract roles.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Check a wallet's risk profile instantly.</li>
+                     </ul>
+                 </div>
+                 <div class="profile-actions">
+                     <div class="action-with-qr">
+-                        <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Ouvrir l'App Web</a>
+-                        <button class="qr-btn" aria-label="Afficher le QR Code" title="Scanner pour ouvrir sur mobile" onclick="document.getElementById('qr-modal-app').classList.add('visible')">
++                        <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Open Web App</a>
++                        <button class="qr-btn" aria-label="Show QR Code" title="Scan to open on mobile" onclick="document.getElementById('qr-modal-app').classList.add('visible')">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                 <rect width="5" height="5" x="3" y="3" rx="1"/>
+                                 <rect width="5" height="5" x="16" y="3" rx="1"/>
+@@ -161,8 +207,8 @@
+                         </button>
+                     </div>
+                     <div class="profile-links">
+-                        <a href="https://github.com/VISIALIS/alter/releases/latest" class="link-action">Télécharger pour Desktop</a>
+-                        <a href="https://github.com/VISIALIS/alter/issues" class="link-action">Devenir Beta Testeur Mobile</a>
++                        <a href="https://github.com/VISIALIS/alter/releases/latest" class="link-action">Download Desktop Release</a>
++                        <a href="https://github.com/VISIALIS/alter/issues" class="link-action">Request Mobile Beta</a>
+                     </div>
+                     <div class="platform-badges mt-2">
+                         <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> macOS</span>
+@@ -181,30 +227,30 @@
+         <!-- Profil Développeur -->
+         <div class="profile-block reverse">
+             <div class="profile-info">
+-                <h3>Pour les développeurs Web3</h3>
+-                <p>Intégrez l'intelligence on-chain directement dans votre terminal et vos scripts.</p>
++                <h3>For Web3 Developers</h3>
++                <p>Integrate on-chain intelligence directly in your terminal and shell scripts.</p>
+                 <div class="use-cases">
+-                    <h4>Cas d'usage :</h4>
++                    <h4>Use cases:</h4>
+                     <ul>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Déboguer des déploiements de contrats.</li>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automatiser la classification d'adresses en masse.</li>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Intégrer la vérification dans vos scripts CI/CD.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Debug smart contract deployments.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automate batch address classifications.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Integrate verification in CI/CD pipelines.</li>
+                     </ul>
+                 </div>
+                 <div class="profile-actions">
+                     <div class="install-command" style="margin-bottom: 0.5rem;">
+                         <code>curl -fsSL https://www.alter-evm.com/install.sh | bash</code>
+-                        <button class="copy-btn" aria-label="Copier la commande" title="Copier" onclick="navigator.clipboard.writeText('curl -fsSL https://www.alter-evm.com/install.sh | bash'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
++                        <button class="copy-btn" aria-label="Copy command" title="Copy to clipboard" onclick="navigator.clipboard.writeText('curl -fsSL https://www.alter-evm.com/install.sh | bash'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
+                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                         </button>
+                     </div>
+                     <div class="install-command">
+                         <code>iwr https://www.alter-evm.com/install.ps1 -useb | iex</code>
+-                        <button class="copy-btn" aria-label="Copier la commande Windows" title="Copier" onclick="navigator.clipboard.writeText('iwr https://www.alter-evm.com/install.ps1 -useb | iex'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
++                        <button class="copy-btn" aria-label="Copy Windows command" title="Copy to clipboard" onclick="navigator.clipboard.writeText('iwr https://www.alter-evm.com/install.ps1 -useb | iex'); this.classList.add('copied'); setTimeout(() => this.classList.remove('copied'), 2000);">
+                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                         </button>
+                     </div>
+-                    <p class="platform-note">Aussi via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a></p>
++                    <p class="platform-note">Also via <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew</a></p>
+                 </div>
+             </div>
+             <div class="profile-visual">
+@@ -226,14 +272,14 @@
+         <!-- Profil AI Agent -->
+         <div class="profile-block">
+             <div class="profile-info">
+-                <h3>Pour les opérateurs d'Agents IA</h3>
+-                <p>Donnez à votre assistant IA (Claude, Cursor, Windsurf) la capacité de lire la blockchain via le protocole MCP.</p>
++                <h3>For AI Agent Operators</h3>
++                <p>Give your AI assistant (Claude, Cursor, Windsurf) the ability to read the blockchain via the MCP protocol.</p>
+                 <div class="use-cases">
+-                    <h4>Cas d'usage :</h4>
++                    <h4>Use cases:</h4>
+                     <ul>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Demander à votre IA d'analyser un portfolio.</li>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Laisser l'agent lire les capacités réelles d'un contrat.</li>
+-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automatiser vos recherches en langage naturel.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ask your AI to analyze a wallet's portfolio.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Let the agent read a contract's real capabilities.</li>
++                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Automate on-chain research in natural language.</li>
+                     </ul>
+                 </div>
+             </div>
+@@ -245,7 +291,7 @@
+                 Read it here: https://www.alter-evm.com/llms.txt
+                 -->
+                 <div class="code-block mcp-config-block">
+-                    <div class="code-header">Configuration Client MCP (mcp.json)</div>
++                    <div class="code-header">MCP Client Configuration (mcp.json)</div>
+                     <pre><code>{
+   "mcpServers": {
+     "alter": {
+@@ -255,7 +301,7 @@
+   }
+ }</code></pre>
+                 </div>
+-                <p class="platform-note">Claude Desktop : utilisez le chemin absolu du binaire (ex. <code>/opt/homebrew/bin/alter-mcp</code>) — <a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">Guide de configuration MCP</a></p>
++                <p class="platform-note">Claude Desktop: use the absolute binary path (e.g. <code>/opt/homebrew/bin/alter-mcp</code>) — <a href="https://github.com/VISIALIS/homebrew-alter#alter-mcp">View MCP setup guide</a></p>
+             </div>
+         </div>
+     </section>
+@@ -265,46 +311,46 @@
+             <div class="feature-icon">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+             </div>
+-            <h3>Confidentialité d'abord</h3>
+-            <p>Aucun traqueur, aucune analytique, aucun intermédiaire : vos requêtes vont directement aux nœuds RPC publics.</p>
++            <h3>Privacy First</h3>
++            <p>No tracking, no analytics, no middleman: your queries go straight to public RPC nodes.</p>
+         </div>
+         <div class="feature-card">
+             <div class="feature-icon">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+             </div>
+-            <h3>Preuve on-chain (vérifiable par vous)</h3>
+-            <p>Chaque classification s'appuie uniquement sur des faits lisibles directement sur la blockchain publique. Copiez l'adresse dans Alter, puis allez sur Etherscan ou GnosisScan : vous verrez les mêmes informations de base.</p>
++            <h3>On-Chain Proof (you can verify yourself)</h3>
++            <p>Every classification is based only on facts you can read directly on the public blockchain. Paste the address in Alter, then check on Etherscan or GnosisScan — you will see the same base information.</p>
+         </div>
+         <div class="feature-card">
+             <div class="feature-icon">
+                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+             </div>
+-            <h3>Omni-Plateforme</h3>
+-            <p>Une expérience fluide sur Web, Desktop, Terminal et Mobile — sur Ethereum, Gnosis et toute chaîne EVM.</p>
++            <h3>Omni-Platform</h3>
++            <p>Seamless experience across Web, Desktop, Terminal, and Mobile — on Ethereum, Gnosis, and any EVM chain.</p>
+         </div>
+     </section>
+ 
+     <footer>
+         <div class="footer-content">
+-            <p>&copy; 2026 VISIALIS. Tous droits réservés.</p>
++            <p>&copy; 2026 VISIALIS. All rights reserved.</p>
+             <div class="footer-links">
+-                <a href="/get/">Obtenir Alter</a>
+-                <a href="https://github.com/VISIALIS/alter">Dépôt GitHub</a>
+-                <a href="https://app.alter-evm.com/">App Web</a>
++                <a href="/get/">Get Alter</a>
++                <a href="https://github.com/VISIALIS/alter">GitHub Repository</a>
++                <a href="https://app.alter-evm.com/">Web App</a>
+                 <a href="https://github.com/VISIALIS/alter/releases">Releases</a>
+-                <a href="https://github.com/VISIALIS/homebrew-alter">Tap Homebrew</a>
+-                <a href="mailto:support@alter-evm.com">Contacter le support</a>
+-                <a href="https://github.com/VISIALIS/alter/issues">Signaler un problème</a>
++                <a href="https://github.com/VISIALIS/homebrew-alter">Homebrew tap</a>
++                <a href="mailto:support@alter-evm.com">Contact Support</a>
++                <a href="https://github.com/VISIALIS/alter/issues">Report an issue</a>
+             </div>
+         </div>
+     </footer>
+     <div id="qr-modal-app" class="qr-modal" onclick="if(event.target === this) this.classList.remove('visible')">
+         <div class="qr-modal-content">
+-            <button class="qr-modal-close" onclick="document.getElementById('qr-modal-app').classList.remove('visible')" aria-label="Fermer le QR Code">
++            <button class="qr-modal-close" onclick="document.getElementById('qr-modal-app').classList.remove('visible')" aria-label="Close QR Code">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+             </button>
+-            <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Scanner pour ouvrir l'App Web</h3>
+-            <img src="/qr-app.svg" alt="QR Code pour l'App Web">
++            <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Scan to open Web App</h3>
++            <img src="/qr-app.svg" alt="QR Code for Web App">
+             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">https://app.alter-evm.com/</p>
+         </div>
+     </div>
