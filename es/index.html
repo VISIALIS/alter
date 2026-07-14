@@ -23,7 +23,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">Alt<sup>er</sup></div>
+        <div class="logo-group">
+            <div class="logo">Alt<sup>er</sup></div>
+            <a class="version-badge" href="https://github.com/VISIALIS/alter/releases" target="_blank" rel="noopener" data-alter-version>v1.20.0</a>
+        </div>
         <div class="lang-switcher">
             <a href="/" aria-label="English">EN</a>
             <a href="/fr/" aria-label="Français">FR</a>
@@ -331,7 +334,7 @@ TOKEN (1)
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 VISIALIS. Todos los derechos reservados.</p>
+            <p>&copy; 2026 VISIALIS. Todos los derechos reservados. &middot; Versión actual: <a href="https://github.com/VISIALIS/alter/releases" data-alter-version>v1.20.0</a></p>
             <div class="footer-links">
                 <a href="/get/">Obtener Alter</a>
                 <a href="https://github.com/VISIALIS/alter">Repositorio GitHub</a>
@@ -353,5 +356,6 @@ TOKEN (1)
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">https://app.alter-evm.com/</p>
         </div>
     </div>
+    <script src="/version-badge.js" defer></script>
 </body>
 </html>

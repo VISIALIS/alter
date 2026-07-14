@@ -61,6 +61,28 @@ body::before {
     -webkit-text-fill-color: transparent;
 }
 
+.logo-group {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+}
+
+.version-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.version-badge:hover {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
 .lang-switcher a {
     color: var(--text-secondary);
     text-decoration: none;
