@@ -7,6 +7,15 @@
         document.querySelectorAll('[data-alter-version]').forEach(function (el) {
             el.textContent = text;
         });
+
+        // Mise à jour dynamique des liens de téléchargement
+        document.querySelectorAll('[data-alter-download-pattern]').forEach(function (el) {
+            var pattern = el.getAttribute('data-alter-download-pattern');
+            if (pattern) {
+                var url = 'https://github.com/VISIALIS/alter/releases/download/v' + version + '/' + pattern.replace('{{VERSION}}', version);
+                el.setAttribute('href', url);
+            }
+        });
     }
 
     function fromCache() {
