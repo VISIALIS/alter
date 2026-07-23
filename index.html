@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alter — Multi-chain EVM address intelligence</title>
     <meta name="description" content="Alter is a privacy-first tool to decode and classify EVM addresses instantly. Available on Web, CLI, Desktop, and as an AI Agent MCP server.">
-    <!-- OpenGraph Meta Tags for Social Media -->
-    <meta property="og:title" content="Alter - EVM Address Identifier">
-    <meta property="og:description" content="Instantly decode and classify EVM addresses with zero tracking.">
+    <!-- OpenGraph Meta Tags for Social Media & WhatsApp -->
+    <meta property="og:site_name" content="Alter">
+    <meta property="og:title" content="Alter — Multi-chain EVM address intelligence">
+    <meta property="og:description" content="Instantly decode and classify EVM addresses with zero tracking. Available on Web, CLI, Desktop, and MCP.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.alter-evm.com/">
+    <meta property="og:image" content="https://www.alter-evm.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Alter - Multi-chain EVM Address Intelligence">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@VISIALIS">
+    <meta name="twitter:title" content="Alter — Multi-chain EVM address intelligence">
+    <meta name="twitter:description" content="Instantly decode and classify EVM addresses with zero tracking. Available on Web, CLI, Desktop, and MCP.">
+    <meta name="twitter:image" content="https://www.alter-evm.com/og-image.jpg">
     
     <link rel="canonical" href="https://www.alter-evm.com/">
     <link rel="alternate" hreflang="en" href="https://www.alter-evm.com/">
@@ -18,6 +34,30 @@
     <link rel="alternate" hreflang="x-default" href="https://www.alter-evm.com/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="theme-color" content="#0F172A">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Alter",
+      "url": "https://www.alter-evm.com/",
+      "image": "https://www.alter-evm.com/og-image.jpg",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web, macOS, Windows, Linux, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Alter is a privacy-first tool to decode and classify EVM addresses instantly across multiple blockchains.",
+      "author": {
+        "@type": "Organization",
+        "name": "VISIALIS",
+        "url": "https://www.alter-evm.com/"
+      }
+    }
+    </script>
 
     <link rel="stylesheet" href="/styles.css?v=2">
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
@@ -498,7 +538,10 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                     <div class="logo">Alt<sup>er</sup></div>
                     <p class="footer-tagline">What the blockchain really says.</p>
                 </div>
-                <div class="footer-social" aria-label="Community links">
+                <div class="footer-social" aria-label="Community & Share links">
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20Alter%20%E2%80%94%20Multi-chain%20EVM%20address%20intelligence%20tool%20:%20https://www.alter-evm.com/" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.763.459 3.486 1.332 5.002L2 22l5.149-1.35c1.464.798 3.116 1.218 4.862 1.218h.004c5.505 0 9.989-4.478 9.99-9.984a9.927 9.927 0 0 0-2.924-7.062A9.923 9.923 0 0 0 12.012 2zM12.01 20.177h-.003c-1.493 0-2.956-.4-4.232-1.157l-.304-.181-3.146.825.839-3.067-.198-.315a8.286 8.286 0 0 1-1.272-4.3c.001-4.57 3.719-8.287 8.29-8.287 2.213 0 4.293.862 5.858 2.428a8.232 8.232 0 0 1 2.424 5.861c-.001 4.571-3.719 8.288-8.286 8.288z"/></svg>
+                    </a>
                     <a href="https://github.com/VISIALIS/alter" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.8.55C20.71 21.38 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/></svg>
                     </a>
