@@ -1018,41 +1018,105 @@ footer {
     color: var(--accent-color);
 }
 
-/* Hero carousel for multiple examples / use cases */
-.hero-carousel {
-  position: relative;
-  max-width: 620px;
-  margin: 2.5rem auto 0;
-  min-height: 115px;
+/* Hero Business Showcase (aperçu métier sans jargon ni adresses brutes) */
+.hero-business-showcase {
+    max-width: 900px;
+    margin: 2.5rem auto 0;
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.1rem 1.4rem;
-  text-align: left;
-  pointer-events: none;
+.search-mock-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+    text-align: left;
 }
 
-.carousel-slide.active {
-  opacity: 1;
-  position: relative;
-  pointer-events: auto;
+.search-mock-bar span {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.use-case-label {
-  font-size: 0.78rem;
-  color: var(--accent-color);
-  margin-bottom: 0.35rem;
-  font-weight: 500;
-  letter-spacing: 0.3px;
+.search-mock-bar .search-badge {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--accent-color);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.showcase-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    text-align: left;
+}
+
+.showcase-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.showcase-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.showcase-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+}
+
+.tag-green {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+}
+
+.tag-blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.tag-purple {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+}
+
+.showcase-card h4 {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.showcase-card p {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.45;
 }
 
 /* Note sous le bloc terminal (Windows + guide MCP) */

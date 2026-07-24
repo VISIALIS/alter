@@ -94,77 +94,31 @@
                 <span class="badge" style="background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: text-top; margin-right: 4px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> alter-mcp (Agents IA)</span>
             </div>
 
-            <div class="hero-carousel" aria-live="polite" aria-label="Exemples d'adresses classifiées par Alter" style="margin-top: 2rem;">
-                <!-- Slide 1: USDT -->
-                <div class="carousel-slide active">
-                    <div class="use-case-label">Humain Métier · Vérifier la légitimité d'un actif</div>
-                    <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Tether USD</strong> · jeton ERC-20 · Ethereum — vérifié on-chain</div>
+            <!-- Hero Business Showcase (sans adresses brutes ni carrousel) -->
+            <div class="hero-business-showcase">
+                <div class="search-mock-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span>Vérifier un titre de propriété, un compte d'entreprise ou un solde certifié...</span>
+                    <span class="search-badge">Preuve instantanée</span>
                 </div>
-                <!-- Slide 2: Wallet KYC -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Humain Métier · Identité et Conformité d'un compte</div>
-                    <code class="example-address">0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Portefeuille</strong> · ID KYC vérifié (RealT) — Registres certifiés on-chain</div>
-                </div>
-                <!-- Slide 3: Whitelist Security Tokens -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Spécialisé Web3 · Inspection d'infrastructure et proxys</div>
-                    <code class="example-address">0x28C6c06298d514Db089934071355E5743bf21d60</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Aave V3 Pool</strong> · Contrat Proxy ERC-1967 — Point d'accès RPC vérifié</div>
-                </div>
-                <!-- Slide 4: Agentique -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Agentique · Autonomie transactionnelle d'un Agent IA</div>
-                    <code class="example-address">alter-mcp server</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Agent IA</strong> · Interaction & exécution autonome sans compte humain ni KYC applicatif</div>
+                <div class="showcase-cards">
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-green">Comptabilité &amp; Trésorerie</div>
+                        <h4>Bilan d'Actifs Certifié</h4>
+                        <p>Valeur exacte des avoirs et trésorerie au centime près, datée et directement auto-vérifiable.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-blue">Immobilier RWA</div>
+                        <h4>Titres &amp; Droits de Propriété</h4>
+                        <p>Consultation des sous-jacents immobiliers et des registres officiels d'ayants droit.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-purple">Autonomie Agentique</div>
+                        <h4>Agent IA Comptable</h4>
+                        <p>Contrôle et exécution d'opérations sous l'identité propre et souveraine de votre agent.</p>
+                    </div>
                 </div>
             </div>
-
-            <script>
-            (function() {
-                const carousel = document.querySelector('.hero-carousel');
-                if (!carousel) return;
-                const slides = carousel.querySelectorAll('.carousel-slide');
-                let current = 0;
-                let interval = null;
-
-                function showSlide(index) {
-                    slides.forEach((slide, i) => {
-                        slide.classList.toggle('active', i === index);
-                    });
-                }
-
-                function nextSlide() {
-                    current = (current + 1) % slides.length;
-                    showSlide(current);
-                }
-
-                function startAutoSlide() {
-                    if (interval) clearInterval(interval);
-                    interval = setInterval(nextSlide, 4200);
-                }
-
-                function stopAutoSlide() {
-                    if (interval) {
-                        clearInterval(interval);
-                        interval = null;
-                    }
-                }
-
-                carousel.addEventListener('mouseenter', stopAutoSlide);
-                carousel.addEventListener('mouseleave', startAutoSlide);
-                carousel.addEventListener('focusin', stopAutoSlide);
-                carousel.addEventListener('focusout', startAutoSlide);
-
-                showSlide(0);
-                startAutoSlide();
-            })();
-            </script>
         </div>
     </header>
 

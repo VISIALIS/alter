@@ -88,79 +88,31 @@
                 <span class="badge" style="background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: text-top; margin-right: 4px;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Alter Desktop</span>
                 <span class="badge" style="background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: text-top; margin-right: 4px;"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg> alter-cli</span>
                 <span class="badge" style="background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: text-top; margin-right: 4px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> alter-mcp (Agentes IA)</span>
-            </div>
-
-            <div class="hero-carousel" aria-live="polite" aria-label="Ejemplos de direcciones clasificadas por Alter" style="margin-top: 2rem;">
-                <!-- Slide 1: USDT -->
-                <div class="carousel-slide active">
-                    <div class="use-case-label">Humano de Negocios · Verificar la legitimidad de un activo</div>
-                    <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Tether USD</strong> · token ERC-20 · Ethereum — verificado on-chain</div>
+                <!-- Hero Business Showcase (sin direcciones brutas ni carrusel) -->
+            <div class="hero-business-showcase">
+                <div class="search-mock-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span>Verificar un título de propiedad, un balance de empresa o un saldo certificado...</span>
+                    <span class="search-badge">Prueba instantánea</span>
                 </div>
-                <!-- Slide 2: Wallet KYC -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Humano de Negocios · Identidad y Cumplimiento de una cuenta</div>
-                    <code class="example-address">0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Billetera</strong> · ID KYC verificado (RealT) — Registros certificados on-chain</div>
-                </div>
-                <!-- Slide 3: Whitelisted Security Tokens -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Especialista Web3 · Inspección de Infraestructura y Proxies</div>
-                    <code class="example-address">0x28C6c06298d514Db089934071355E5743bf21d60</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Aave V3 Pool</strong> · Contrato Proxy ERC-1967 — Punto de Acceso RPC Verificado</div>
-                </div>
-                <!-- Slide 4: Agentic -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Agentico · Autonomía transaccional para Agentes IA</div>
-                    <code class="example-address">alter-mcp server</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Agente IA</strong> · Interacción y ejecución autónoma sin cuenta humana ni KYC aplicativo</div>
+                <div class="showcase-cards">
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-green">Contabilidad y Tesorería</div>
+                        <h4>Balance de Activos Certificado</h4>
+                        <p>Valor exacto de activos y tesorería al centavo, fechado y directamente autoverificable.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-blue">Inmobiliario RWA</div>
+                        <h4>Títulos y Derechos de Propiedad</h4>
+                        <p>Consulta de subyacentes inmobiliarios y registros oficiales de beneficiarios en directo.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-purple">Autonomía Agéntica</div>
+                        <h4>Agente IA Contable</h4>
+                        <p>Control y ejecución de operaciones bajo la identidad propia y soberana de su agente.</p>
+                    </div>
                 </div>
             </div>
-
-            <script>
-            (function() {
-                const carousel = document.querySelector('.hero-carousel');
-                if (!carousel) return;
-                const slides = carousel.querySelectorAll('.carousel-slide');
-                let current = 0;
-                let interval = null;
-
-                function showSlide(index) {
-                    slides.forEach((slide, i) => {
-                        slide.classList.toggle('active', i === index);
-                    });
-                }
-
-                function nextSlide() {
-                    current = (current + 1) % slides.length;
-                    showSlide(current);
-                }
-
-                function startAutoSlide() {
-                    if (interval) clearInterval(interval);
-                    interval = setInterval(nextSlide, 4200);
-                }
-
-                function stopAutoSlide() {
-                    if (interval) {
-                        clearInterval(interval);
-                        interval = null;
-                    }
-                }
-
-                carousel.addEventListener('mouseenter', stopAutoSlide);
-                carousel.addEventListener('mouseleave', startAutoSlide);
-                carousel.addEventListener('focusin', stopAutoSlide);
-                carousel.addEventListener('focusout', startAutoSlide);
-
-                showSlide(0);
-                startAutoSlide();
-            })();
-            </script>
         </div>
     </header>
 

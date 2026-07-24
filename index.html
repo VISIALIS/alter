@@ -94,77 +94,31 @@
                 <span class="badge" style="background: rgba(255,255,255,0.06); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary);"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: text-top; margin-right: 4px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> alter-mcp (AI Agents)</span>
             </div>
 
-            <div class="hero-carousel" aria-live="polite" aria-label="Examples of addresses classified by Alter" style="margin-top: 2rem;">
-                <!-- Slide 1: USDT -->
-                <div class="carousel-slide active">
-                    <div class="use-case-label">Business Human · Verify asset legitimacy</div>
-                    <code class="example-address">0xdAC17F958D2ee523a2206206994597C13D831ec7</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Tether USD</strong> · ERC-20 token · Ethereum — verified on-chain</div>
+            <!-- Hero Business Showcase (no raw addresses or carousel) -->
+            <div class="hero-business-showcase">
+                <div class="search-mock-bar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span>Verify a property title, company balance, or certified holding...</span>
+                    <span class="search-badge">Instant Proof</span>
                 </div>
-                <!-- Slide 2: Wallet KYC -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Business Human · Account identity & compliance</div>
-                    <code class="example-address">0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Wallet</strong> · KYC ID verified (RealT) — Certified on-chain registry</div>
-                </div>
-                <!-- Slide 3: Whitelisted Security Tokens -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Web3 Specialist · Infrastructure & Proxy Inspection</div>
-                    <code class="example-address">0x28C6c06298d514Db089934071355E5743bf21d60</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>Aave V3 Pool</strong> · ERC-1967 Proxy Contract — Verified RPC Endpoint</div>
-                </div>
-                <!-- Slide 4: Agentic -->
-                <div class="carousel-slide">
-                    <div class="use-case-label">Agentic · Transactional autonomy for AI Agents</div>
-                    <code class="example-address">alter-mcp server</code>
-                    <div class="example-proof-line" aria-hidden="true"></div>
-                    <div class="example-result"><strong>AI Agent</strong> · Autonomous interaction & execution without human account or app KYC</div>
+                <div class="showcase-cards">
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-green">Accounting &amp; Treasury</div>
+                        <h4>Certified Asset Balance</h4>
+                        <p>Exact value of corporate treasury and holdings to the penny, dated and self-verifiable.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-blue">Real Estate RWA</div>
+                        <h4>Property Titles &amp; Registries</h4>
+                        <p>Direct lookup of real estate underlyings and official beneficiary records.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <div class="showcase-tag tag-purple">Agentic Autonomy</div>
+                        <h4>Accounting AI Agent</h4>
+                        <p>Operation control and execution under your agent's native, sovereign identity.</p>
+                    </div>
                 </div>
             </div>
-
-            <script>
-            (function() {
-                const carousel = document.querySelector('.hero-carousel');
-                if (!carousel) return;
-                const slides = carousel.querySelectorAll('.carousel-slide');
-                let current = 0;
-                let interval = null;
-
-                function showSlide(index) {
-                    slides.forEach((slide, i) => {
-                        slide.classList.toggle('active', i === index);
-                    });
-                }
-
-                function nextSlide() {
-                    current = (current + 1) % slides.length;
-                    showSlide(current);
-                }
-
-                function startAutoSlide() {
-                    if (interval) clearInterval(interval);
-                    interval = setInterval(nextSlide, 4200);
-                }
-
-                function stopAutoSlide() {
-                    if (interval) {
-                        clearInterval(interval);
-                        interval = null;
-                    }
-                }
-
-                carousel.addEventListener('mouseenter', stopAutoSlide);
-                carousel.addEventListener('mouseleave', startAutoSlide);
-                carousel.addEventListener('focusin', stopAutoSlide);
-                carousel.addEventListener('focusout', startAutoSlide);
-
-                showSlide(0);
-                startAutoSlide();
-            })();
-            </script>
         </div>
     </header>
 
