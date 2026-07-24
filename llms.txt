@@ -41,7 +41,7 @@ To connect the user's environment (Claude Desktop, Cursor, Windsurf, etc.) to th
 ```
 
 **CRITICAL NOTE FOR CLAUDE DESKTOP:** 
-Claude Desktop requires absolute paths for the command. If installed via Homebrew on Apple Silicon, use `/opt/homebrew/bin/alter-mcp`. If installed via the script, find the path (e.g., `/Users/username/.local/bin/alter-mcp`) and use it in the `"command"` field.
+Claude Desktop requires absolute paths for the command. If installed via Homebrew on macOS (ARM64), use `/opt/homebrew/bin/alter-mcp`. If installed via the script, find the path (e.g., `/Users/username/.local/bin/alter-mcp`) and use it in the `"command"` field.
 
 ## 3. How to use it
 
