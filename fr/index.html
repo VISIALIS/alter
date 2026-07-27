@@ -73,7 +73,8 @@
             <a href="/es/" aria-label="Español">ES</a>
         </div>
     </nav>
-    
+
+    <main id="contenu">
     <header class="hero">
         <div class="hero-content">
             <h1>La promesse blockchain. Tenue.</h1>
@@ -159,18 +160,18 @@
 
     <div style="max-width: 680px; margin: 0 auto 3rem; padding: 1rem 1.25rem; text-align: center; color: #94a3b8; font-size: 0.95rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(10px);">
         Les résultats d’Alter restent reliés à des <strong>faits observables on-chain</strong> via les accès RPC choisis.<br>
-        Les informations de base peuvent être recoupées sur <a href="https://etherscan.io" target="_blank" rel="noopener" style="color: #a5b4fc;">Etherscan</a> ou <a href="https://gnosisscan.io" target="_blank" rel="noopener" style="color: #a5b4fc;">GnosisScan</a>.
+        Les informations de base peuvent être recoupées sur <a href="https://etherscan.io" target="_blank" rel="noopener" style="color: #a5b4fc; text-decoration: underline;">Etherscan</a> ou <a href="https://gnosisscan.io" target="_blank" rel="noopener" style="color: #a5b4fc; text-decoration: underline;">GnosisScan</a>.
     </div>
 
     <!-- Trois audiences directes, cinq familles de surfaces -->
     <section id="profiles" class="profiles-section">
-        <h2 class="section-title">Trois audiences, cinq surfaces d’accès</h2>
-        <p class="section-subtitle">Une même connaissance, présentée dans le langage et avec le niveau de détail utiles à chaque interface.</p>
+        <h2 class="section-title">Cinq surfaces d’accès, ce que vous pouvez y faire</h2>
+        <p class="section-subtitle">Une même connaissance, présentée dans le langage et avec le niveau de détail utiles à chaque surface.</p>
 
-        <!-- Audience 1 : utilisateur humain -->
+        <!-- Surface : apps Web / Desktop / Mobile -->
         <div class="profile-block">
             <div class="profile-info">
-                <div class="use-case-label" style="background: rgba(16,185,129,0.15); color: #10b981;">Audience 1 · Utilisateur humain</div>
+                <div class="use-case-label" style="background: rgba(16,185,129,0.15); color: #10b981;">Apps Web · Desktop · Mobile</div>
                 <h3>Comprendre avant d’agir</h3>
                 <p>Alter transforme les faits on-chain en une situation compréhensible, avec la source de preuve et les actions réellement disponibles. <strong>Le vocabulaire EVM n’est pas imposé</strong> pour saisir le résultat.</p>
                 <div class="use-cases">
@@ -216,10 +217,10 @@
             </div>
         </div>
 
-        <!-- Audience 2 : opérateur technique humain -->
+        <!-- Surface : CLI / mode inspecteur Desktop -->
         <div class="profile-block reverse">
             <div class="profile-info">
-                <div class="use-case-label" style="background: rgba(59,130,246,0.15); color: var(--accent-color);">Audience 2 · Opérateur technique (Développeurs, Auditeurs, DevOps)</div>
+                <div class="use-case-label" style="background: rgba(59,130,246,0.15); color: var(--accent-color);">alter-cli · Mode Inspecteur Desktop</div>
                 <h3>Endpoint RPC local &amp; inspection scriptable</h3>
                 <p>Travaillez au niveau JSON-RPC lorsque c’est utile, ou appuyez-vous sur les objets métier déjà modélisés par Alter.</p>
                 <div class="use-cases">
@@ -257,10 +258,10 @@ $ npx hardhat run scripts/deploy.js</code></pre>
             </div>
         </div>
 
-        <!-- Audience 3 : agent logiciel -->
+        <!-- Surface : MCP pour agents -->
         <div class="profile-block">
             <div class="profile-info">
-                <div class="use-case-label" style="background: rgba(168,85,247,0.15); color: #c084fc;">Audience 3 · Agent logiciel</div>
+                <div class="use-case-label" style="background: rgba(168,85,247,0.15); color: #c084fc;">alter-mcp · Serveur pour agents IA</div>
                 <h3>Connaissance structurée et vérifiable</h3>
                 <p>Alter fournit des outils MCP typés et découvrables, avec des résultats reliés à leurs preuves et des limites explicites.</p>
                 <div class="use-cases">
@@ -307,7 +308,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
             <h3>Preuve on-chain (vérifiable par vous)</h3>
-            <p>Chaque classification s'appuie uniquement sur des faits lisibles directement sur la blockchain publique. Copiez l'adresse dans Alter, puis allez sur Etherscan ou GnosisScan : vous verrez les mêmes informations de base.</p>
+            <p>Les faits qui fondent une classification sont lisibles directement sur la blockchain publique. Copiez l'adresse dans Alter, puis allez sur Etherscan ou GnosisScan : vous verrez les mêmes informations de base. Alter distingue toujours ces preuves on-chain des heuristiques de présentation qui les complètent.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">
@@ -472,14 +473,15 @@ $ npx hardhat run scripts/deploy.js</code></pre>
             </div>
         </div>
     </section>
+    </main>
 
     <footer>
         <div class="footer-content">
             <!-- 1. Notes de bas de page & Avertissements légaux -->
             <div class="site-footer-notes">
                 <ol>
-                    <li>Alter est un logiciel open-source et souverain édité par VISIALIS. Le décodage et la classification interrogent les points d’accès RPC configurés, sans traqueur de vie privée ni base de données intermédiaire imposée.</li>
-                    <li>L’accès aux interfaces Web et Desktop, à la CLI et au serveur <code>alter-mcp</code> est fourni ouvertement. Les applications mobiles restent en attente de distribution ; l’achat et l’exécution autonomes par un agent ne sont pas livrés.</li>
+                    <li>Alter est un logiciel souverain édité par VISIALIS. Le décodage et la classification interrogent les points d’accès RPC configurés, sans traqueur de vie privée ni base de données intermédiaire imposée.</li>
+                    <li>Les interfaces Web et Desktop, la CLI et le serveur <code>alter-mcp</code> sont disponibles dès aujourd’hui. Les applications mobiles restent en attente de distribution ; l’achat et l’exécution autonomes par un agent ne sont pas livrés.</li>
                     <li>Ethereum, Gnosis, Arbitrum, Optimism, Polygon, Etherscan, GnosisScan, Hardhat, Aave et RealT sont des marques déposées de leurs propriétaires respectifs. Leur mention vise exclusivement la vérifiabilité des preuves publiques.</li>
                 </ol>
             </div>
@@ -498,13 +500,13 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                 </div>
 
                 <div class="directory-col">
-                    <h4>Audiences</h4>
+                    <h4>Ce que vous pouvez faire</h4>
                     <ul>
-                        <li><a href="/fr/#profiles">Utilisateurs humains</a></li>
-                        <li><a href="/fr/#profiles">Opérateurs techniques</a></li>
-                        <li><a href="/fr/#profiles">Développeurs &amp; DevOps</a></li>
-                        <li><a href="/fr/#profiles">Auditeurs</a></li>
-                        <li><a href="/fr/#profiles">Agents logiciels</a></li>
+                        <li><a href="/fr/#profiles">Comprendre une adresse ou une transaction</a></li>
+                        <li><a href="/fr/#profiles">Vérifier une preuve on-chain</a></li>
+                        <li><a href="/fr/#profiles">Servir un endpoint RPC local</a></li>
+                        <li><a href="/fr/#profiles">Inspecter et automatiser en CLI</a></li>
+                        <li><a href="/fr/#profiles">Outiller un agent IA via MCP</a></li>
                     </ul>
                 </div>
 
@@ -513,9 +515,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                     <ul>
                         <li><a href="/llms.txt">Instructions Agents (llms.txt)</a></li>
                         <li><a href="/fr/#profiles">Point d'accès RPC unifié</a></li>
-                        <li><a href="https://github.com/VISIALIS/alter" target="_blank" rel="noopener">Code source GitHub</a></li>
                         <li><a href="https://github.com/VISIALIS/alter/releases" target="_blank" rel="noopener" data-alter-version>Notes de version (v1.24.0)</a></li>
-                        <li><a href="https://github.com/VISIALIS/alter/blob/main/docs/architecture/overview.md" target="_blank" rel="noopener">Architecture & ADRs</a></li>
                     </ul>
                 </div>
 
@@ -526,14 +526,12 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                         <li><a href="/cgu.html">Conditions Générales (CGU)</a></li>
                         <li><a href="/privacy.html">Politique de Confidentialité</a></li>
                         <li><a href="/terms.html">Mentions Légales</a></li>
-                        <li><a href="/robots.txt">Fichier Robots.txt</a></li>
                     </ul>
                 </div>
 
                 <div class="directory-col">
                     <h4>Communauté & Partage</h4>
                     <ul>
-                        <li><a href="https://api.whatsapp.com/send?text=D%C3%A9couvre%20Alter%20%E2%80%94%20Intelligence%20d'adresses%20EVM%20multi-cha%C3%AEnes%20:%20https://www.alter-evm.com/fr/" target="_blank" rel="noopener">Partager sur WhatsApp</a></li>
                         <li><a href="mailto:support@alter-evm.com">Support par Email</a></li>
                         <li><span>Telegram <span class="soon-badge">Bientôt</span></span></li>
                         <li><span>X (Twitter) <span class="soon-badge">Bientôt</span></span></li>
@@ -567,16 +565,26 @@ $ npx hardhat run scripts/deploy.js</code></pre>
             </div>
         </div>
     </footer>
-    <div id="qr-modal-app" class="qr-modal" onclick="if(event.target === this) this.classList.remove('visible')">
+    <div id="qr-modal-app" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-modal-app-title" onclick="if(event.target === this) this.classList.remove('visible')">
         <div class="qr-modal-content">
             <button class="qr-modal-close" onclick="document.getElementById('qr-modal-app').classList.remove('visible')" aria-label="Fermer le QR Code">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
-            <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Scanner pour ouvrir l'App Web</h3>
+            <h3 id="qr-modal-app-title" style="margin-bottom: 1rem; color: var(--text-primary);">Scanner pour ouvrir l'App Web</h3>
             <img src="/qr-app.svg" alt="QR Code pour l'App Web">
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">https://app.alter-evm.com/</p>
         </div>
     </div>
     <script src="/version-badge.js" defer></script>
+    <script>
+        // Fermeture des modales avec la touche Échap (accessibilité clavier).
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.qr-modal.visible').forEach(function (modal) {
+                    modal.classList.remove('visible');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
