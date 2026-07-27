@@ -544,15 +544,12 @@ body::before {
 }
 
 
-/* Footer épuré multi-colonnes */
+/* Footer */
 
 footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 3rem 5% 2rem;
-    margin-top: 5rem;
-    background-color: rgba(10, 15, 29, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border-color);
+    margin-top: 0;
+    background: transparent;
 }
 
 .footer-content {
@@ -728,11 +725,6 @@ footer {
     .site-footer-directory {
         grid-template-columns: 1fr;
     }
-}    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
 }
 
 @media (max-width: 640px) {
@@ -955,13 +947,6 @@ footer {
 
 .instructions-link:hover {
     background: rgba(59, 130, 246, 0.2);
-}
-
-/* Footer override */
-footer {
-    border-top: 1px solid var(--border-color);
-    margin-top: 0;
-    background: transparent;
 }
 
 @media (max-width: 768px) {
