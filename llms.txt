@@ -2,7 +2,7 @@
 
 🤖 **Hello AI Agent!** 
 If you are reading this file, you have been tasked with installing, configuring, or using the Alter MCP server.
-Alter is a privacy-first, zero-tracking tool that decodes and classifies EVM addresses instantly (Wallets, Tokens, Proxies, Smart Contracts). 
+Alter is a privacy-first, zero-tracking tool that qualifies EVM addresses and reconstructs their asset and movement history. On request, it translates that history into the accounting or tax language of a user-selected jurisdiction. Each translated item links both to its on-chain evidence and to the regulatory or accounting source used.
 
 This file gives you all the context you need to orchestrate Alter autonomously.
 
@@ -47,7 +47,8 @@ Claude Desktop requires absolute paths for the command. If installed via Homebre
 
 Once the MCP server is initialized, you have access to typed, discoverable tools. Each result stays linked to its on-chain proof, and limits are explicit. The main tool families:
 
-- **Address portrait & context:** `address.inspect` (type, roles, capabilities and their on-chain proof source), `address.contexts`, `address.balance`, `address.portfolio`, `address.position`, `address.statement`, `address.transfers`, `address.allowances`, `address.approvals`.
+- **Address portrait & context:** `address.inspect` (type, roles, capabilities and their on-chain proof source), `address.contexts`, `address.balance`, `address.portfolio`, `address.position`, `address.transfers`, `address.allowances`, `address.approvals`.
+- **Classified activity statement:** `address.statement` produces a closed-period audit/control statement with qualified movements, wallet-perspective lines, reconciliation, evidence, confidence, and explicit limits. It is not a final accounting entry, tax calculation, filing, or professional opinion.
 - **Token economics:** `address.concentration` (full holder list, not a capped sample), `address.check_kyc_batch`, `address.lending_risk_score`, `address.lending_apy_history`.
 - **Transactions:** `transaction.inspect` (classifies every address involved, not only the main one), `transaction.simulate_transfer`.
 - **Lending & markets:** `lending.pool_snapshot`, `lending.positions_batch`, `lending.spread` (primary vs secondary market spread), `lending.events`, `orderbook.orders`.
@@ -57,6 +58,10 @@ Once the MCP server is initialized, you have access to typed, discoverable tools
 Guidance:
 - **Always rely on on-chain data:** Alter pulls verifiable data from public RPC nodes. You do not manage RPC URLs or API keys yourself.
 - **Proof vs heuristic:** Alter always separates on-chain proof from presentation heuristics — surface that distinction to the user rather than flattening it.
+- **Professional translation:** Translate the qualified asset and movement history only for an explicitly requested jurisdiction and supplied context. Do not infer a jurisdiction, regime, or universal treatment from a token contract or transaction hash.
+- **Dual proof:** Every translated item must retain links to the on-chain evidence establishing the fact and to the versioned regulatory or accounting source supporting the professional term.
+- **Strict boundary:** Alter stops at this sourced translation. Never present its output as a final journal entry, tax-base or tax-due calculation, regime selection, filing, advice, certification, or recommendation.
+- **Current coverage:** Structured jurisdictional translation and regulatory-source links are not yet exhaustive. Preserve `unclassified`, `undetermined`, confidence, evidence, and limitation states rather than filling gaps.
 - **Multichain by default:** Alter resolves addresses across multiple EVM chains automatically.
 - **Proxies & ABIs:** If an address is a proxy (like an ERC-1967), Alter resolves the underlying implementation for you.
 - **Not delivered yet:** autonomous purchase/execution in crypto-assets is a product goal, not a shipped capability — never present it as available.

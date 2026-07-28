@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alter — Make the EVM readable, provable, and accessible</title>
-    <meta name="description" content="Alter turns EVM facts into verifiable knowledge and reduces reliance on a single access point. Available on Web, Desktop, CLI, and MCP.">
+    <meta name="description" content="Alter translates EVM asset and movement history into the accounting or tax language of the requested jurisdiction, with on-chain evidence and regulatory sources.">
     <!-- OpenGraph Meta Tags for Social Media & WhatsApp -->
     <meta property="og:site_name" content="Alter">
     <meta property="og:title" content="Alter — The blockchain promise. Delivered.">
-    <meta property="og:description" content="Understand what the EVM actually allows, verify the evidence, and choose how you connect.">
+    <meta property="og:description" content="EVM history translated for the requested jurisdiction, with on-chain evidence and regulatory sources.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.alter-evm.com/">
     <meta property="og:image" content="https://www.alter-evm.com/og-image.jpg">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@VISIALIS">
     <meta name="twitter:title" content="Alter — The blockchain promise. Delivered.">
-    <meta name="twitter:description" content="Understand what the EVM actually allows, verify the evidence, and choose how you connect.">
+    <meta name="twitter:description" content="EVM history translated for the requested jurisdiction, with on-chain evidence and regulatory sources.">
     <meta name="twitter:image" content="https://www.alter-evm.com/og-image.jpg">
     
     <link rel="canonical" href="https://www.alter-evm.com/">
@@ -50,7 +50,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "description": "Alter turns EVM facts into verifiable knowledge and reduces reliance on a single access point.",
+      "description": "Alter translates EVM asset and movement history into the accounting or tax language of the requested jurisdiction, with on-chain evidence and regulatory sources.",
       "author": {
         "@type": "Organization",
         "name": "VISIALIS",
@@ -163,6 +163,28 @@
         You can cross-check the underlying information on <a href="https://etherscan.io" target="_blank" rel="noopener" style="color: #a5b4fc; text-decoration: underline;">Etherscan</a> or <a href="https://gnosisscan.io" target="_blank" rel="noopener" style="color: #a5b4fc; text-decoration: underline;">GnosisScan</a>.
     </div>
 
+    <section id="professionals" class="profiles-section" style="scroll-margin-top: 6rem;">
+        <h2 class="section-title">From EVM history to accounting and tax language</h2>
+        <p class="section-subtitle">Alter translates qualified assets and movements for the requested jurisdiction, then links every term to its evidence.</p>
+        <div class="features" style="padding: 2rem 5%;">
+            <div class="feature-card">
+                <h3>Qualify the asset</h3>
+                <p>Coin, stablecoin, claim, debt, share, receipt, or collateral: Alter establishes the observable economic nature without assigning one universal treatment to a token.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Reconstruct the movements</h3>
+                <p>One transaction may contain several movements. Alter reconstructs the history and qualifies acquisitions, disposals, payments, internal transfers, fees, loans, repayments, or income from the available facts.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Translate for the professional</h3>
+                <p>Every term links to the on-chain evidence for the fact and to the regulatory or accounting source for the requested jurisdiction. If data or a source is missing, the translation remains undetermined.</p>
+            </div>
+        </div>
+        <div style="max-width: 780px; margin: 0 auto 3rem; padding: 1rem 1.25rem; text-align: center; color: #94a3b8; font-size: 0.95rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+            <strong>Product boundary:</strong> Alter stops at the sourced translation of the history. It produces no final journal entry, tax calculation, regime selection, filing, or professional opinion. <code>address.statement</code> already provides the classified, proven foundation; jurisdictional translation and regulatory-source links still need broader coverage.
+        </div>
+    </section>
+
     <!-- Three direct audiences, five surface families -->
     <section id="profiles" class="profiles-section">
         <h2 class="section-title">Five access surfaces, and what you can do on each</h2>
@@ -269,6 +291,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Verifiable portrait</strong>: <code>address.inspect</code> includes the proof source for each capability it exposes.</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Complete result</strong>: <code>address.concentration</code> returns the full detected holder list.</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Transaction context</strong>: <code>transaction.inspect</code> classifies every address involved in the transaction.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Classified statement</strong>: <code>address.statement</code> produces closed-period movements, wallet-perspective lines, reconciliations, and evidence for audit and control.</li>
                     </ul>
                 </div>
                 <div style="font-size: 0.85rem; color: #e9d5ff; margin-bottom: 1.5rem; background: rgba(168,85,247,0.1); padding: 0.5rem 0.8rem; border-radius: 6px;">
@@ -482,6 +505,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                 <ol>
                     <li>Alter is sovereign software published by VISIALIS. EVM address decoding and classification query the configured RPC access points without privacy trackers or a mandatory third-party database.</li>
                     <li>The Web and Desktop interfaces, the CLI, and the <code>alter-mcp</code> server are available today. Mobile apps are still awaiting distribution; autonomous agent purchase and execution are not delivered.</li>
+                    <li>Alter translates a history for the requested jurisdiction and links on-chain evidence to regulatory or accounting sources; it produces no final entry, tax calculation, regime selection, filing, or professional opinion.</li>
                     <li>Ethereum, Gnosis, Arbitrum, Optimism, Polygon, Etherscan, GnosisScan, Hardhat, Aave, and RealT are registered trademarks of their respective owners. Mentioning them serves solely public proof verifiability.</li>
                 </ol>
             </div>
@@ -503,6 +527,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                     <h4>What you can do</h4>
                     <ul>
                         <li><a href="/#profiles">Understand an address or transaction</a></li>
+                        <li><a href="/#professionals">Translate for accountants or tax specialists</a></li>
                         <li><a href="/#profiles">Verify on-chain proof</a></li>
                         <li><a href="/#profiles">Serve a local RPC endpoint</a></li>
                         <li><a href="/#profiles">Inspect and automate in the CLI</a></li>

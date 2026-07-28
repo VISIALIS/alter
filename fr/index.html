@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alter — L’EVM lisible, prouvable et accessible</title>
-    <meta name="description" content="Alter transforme les faits EVM en connaissance vérifiable et réduit la dépendance à un point d’accès unique. Disponible sur Web, Desktop, CLI et MCP.">
+    <meta name="description" content="Alter traduit l’historique d’actifs et de mouvements EVM dans le langage comptable ou fiscal de la juridiction demandée, avec preuves on-chain et sources réglementaires.">
     <!-- OpenGraph Meta Tags pour réseaux sociaux & WhatsApp -->
     <meta property="og:site_name" content="Alter">
     <meta property="og:title" content="Alter — La promesse blockchain. Tenue.">
-    <meta property="og:description" content="Comprenez ce que l’EVM permet réellement, vérifiez la preuve et choisissez votre point d’accès.">
+    <meta property="og:description" content="Un historique EVM traduit selon la juridiction demandée, avec preuves on-chain et sources réglementaires.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.alter-evm.com/fr/">
     <meta property="og:image" content="https://www.alter-evm.com/og-image.jpg">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@VISIALIS">
     <meta name="twitter:title" content="Alter — La promesse blockchain. Tenue.">
-    <meta name="twitter:description" content="Comprenez ce que l’EVM permet réellement, vérifiez la preuve et choisissez votre point d’accès.">
+    <meta name="twitter:description" content="Un historique EVM traduit selon la juridiction demandée, avec preuves on-chain et sources réglementaires.">
     <meta name="twitter:image" content="https://www.alter-evm.com/og-image.jpg">
     
     <link rel="canonical" href="https://www.alter-evm.com/fr/">
@@ -50,7 +50,7 @@
         "price": "0",
         "priceCurrency": "EUR"
       },
-      "description": "Alter transforme les faits EVM en connaissance vérifiable et réduit la dépendance à un point d’accès unique.",
+      "description": "Alter traduit l’historique d’actifs et de mouvements EVM dans le langage comptable ou fiscal de la juridiction demandée, avec preuves on-chain et sources réglementaires.",
       "author": {
         "@type": "Organization",
         "name": "VISIALIS",
@@ -163,6 +163,28 @@
         Les informations de base peuvent être recoupées sur <a href="https://etherscan.io" target="_blank" rel="noopener" style="color: #a5b4fc; text-decoration: underline;">Etherscan</a> ou <a href="https://gnosisscan.io" target="_blank" rel="noopener" style="color: #a5b4fc; text-decoration: underline;">GnosisScan</a>.
     </div>
 
+    <section id="professionals" class="profiles-section" style="scroll-margin-top: 6rem;">
+        <h2 class="section-title">De l’historique EVM aux langages comptable et fiscal</h2>
+        <p class="section-subtitle">Alter traduit les actifs et mouvements qualifiés selon la juridiction demandée, puis relie chaque terme à ses preuves.</p>
+        <div class="features" style="padding: 2rem 5%;">
+            <div class="feature-card">
+                <h3>Qualifier l’actif</h3>
+                <p>Coin, stablecoin, créance, dette, part, reçu ou garantie : Alter établit la nature économique observable sans attacher un traitement universel au seul jeton.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Reconstituer les mouvements</h3>
+                <p>Une transaction peut contenir plusieurs mouvements. Alter reconstitue l’historique et qualifie acquisition, cession, paiement, transfert interne, frais, emprunt, remboursement ou revenu selon les faits disponibles.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Traduire pour le professionnel</h3>
+                <p>Chaque terme est relié aux preuves on-chain du fait et à la source réglementaire ou normative de la juridiction demandée. Si une donnée ou une source manque, la traduction reste indéterminée.</p>
+            </div>
+        </div>
+        <div style="max-width: 780px; margin: 0 auto 3rem; padding: 1rem 1.25rem; text-align: center; color: #94a3b8; font-size: 0.95rem; line-height: 1.5; background: rgba(255,255,255,0.03); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);">
+            <strong>Frontière du produit :</strong> Alter s’arrête à l’historique traduit et sourcé. Il ne produit ni écriture comptable définitive, ni calcul d’impôt, ni choix de régime, ni déclaration, ni avis professionnel. <code>address.statement</code> fournit déjà le socle classifié et prouvé ; la traduction juridictionnelle et les liens réglementaires restent à étendre.
+        </div>
+    </section>
+
     <!-- Trois audiences directes, cinq familles de surfaces -->
     <section id="profiles" class="profiles-section">
         <h2 class="section-title">Cinq surfaces d’accès, ce que vous pouvez y faire</h2>
@@ -269,6 +291,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Portrait vérifiable</strong> : <code>address.inspect</code> inclut la source de preuve de chaque capacité exposée.</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Résultat complet</strong> : <code>address.concentration</code> renvoie la liste complète des détenteurs détectés.</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Contexte transactionnel</strong> : <code>transaction.inspect</code> classifie toutes les adresses impliquées dans la transaction.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Relevé classifié</strong> : <code>address.statement</code> produit sur période fermée des mouvements, lignes par wallet, rapprochements et preuves exploitables pour le contrôle.</li>
                     </ul>
                 </div>
                 <div style="font-size: 0.85rem; color: #e9d5ff; margin-bottom: 1.5rem; background: rgba(168,85,247,0.1); padding: 0.5rem 0.8rem; border-radius: 6px;">
@@ -482,6 +505,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                 <ol>
                     <li>Alter est un logiciel souverain édité par VISIALIS. Le décodage et la classification interrogent les points d’accès RPC configurés, sans traqueur de vie privée ni base de données intermédiaire imposée.</li>
                     <li>Les interfaces Web et Desktop, la CLI et le serveur <code>alter-mcp</code> sont disponibles dès aujourd’hui. Les applications mobiles restent en attente de distribution ; l’achat et l’exécution autonomes par un agent ne sont pas livrés.</li>
+                    <li>Alter traduit un historique selon la juridiction demandée et lie preuves on-chain et sources réglementaires ou normatives ; il ne produit ni écriture, ni calcul d’impôt, ni choix de régime, ni déclaration, ni avis professionnel.</li>
                     <li>Ethereum, Gnosis, Arbitrum, Optimism, Polygon, Etherscan, GnosisScan, Hardhat, Aave et RealT sont des marques déposées de leurs propriétaires respectifs. Leur mention vise exclusivement la vérifiabilité des preuves publiques.</li>
                 </ol>
             </div>
@@ -503,6 +527,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                     <h4>Ce que vous pouvez faire</h4>
                     <ul>
                         <li><a href="/fr/#profiles">Comprendre une adresse ou une transaction</a></li>
+                        <li><a href="/fr/#professionals">Traduire pour un comptable ou fiscaliste</a></li>
                         <li><a href="/fr/#profiles">Vérifier une preuve on-chain</a></li>
                         <li><a href="/fr/#profiles">Servir un endpoint RPC local</a></li>
                         <li><a href="/fr/#profiles">Inspecter et automatiser en CLI</a></li>
