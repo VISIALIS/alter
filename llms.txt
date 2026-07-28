@@ -45,10 +45,21 @@ Claude Desktop requires absolute paths for the command. If installed via Homebre
 
 ## 3. How to use it
 
-Once the MCP server is initialized, you will have access to a suite of tools (e.g., `inspect`, `kyc`, `portfolio`, etc.).
-- **Always rely on on-chain data:** Alter pulls verifiable data from public RPC nodes. You do not need to manage RPC URLs or API keys yourself.
+Once the MCP server is initialized, you have access to typed, discoverable tools. Each result stays linked to its on-chain proof, and limits are explicit. The main tool families:
+
+- **Address portrait & context:** `address.inspect` (type, roles, capabilities and their on-chain proof source), `address.contexts`, `address.balance`, `address.portfolio`, `address.position`, `address.statement`, `address.transfers`, `address.allowances`, `address.approvals`.
+- **Token economics:** `address.concentration` (full holder list, not a capped sample), `address.check_kyc_batch`, `address.lending_risk_score`, `address.lending_apy_history`.
+- **Transactions:** `transaction.inspect` (classifies every address involved, not only the main one), `transaction.simulate_transfer`.
+- **Lending & markets:** `lending.pool_snapshot`, `lending.positions_batch`, `lending.spread` (primary vs secondary market spread), `lending.events`, `orderbook.orders`.
+- **Chains & RPC:** `chain.list`, `chain.inspect`, `chain.search`, `chain.rpc`, `chain.rpc_batch` (Alter routes to the RPC endpoints you configure).
+- **Analytics & observability:** `analytics.snapshot`, `observability.quality_report`, `observability.anomalies`, `observability.diagnostics`.
+
+Guidance:
+- **Always rely on on-chain data:** Alter pulls verifiable data from public RPC nodes. You do not manage RPC URLs or API keys yourself.
+- **Proof vs heuristic:** Alter always separates on-chain proof from presentation heuristics — surface that distinction to the user rather than flattening it.
 - **Multichain by default:** Alter resolves addresses across multiple EVM chains automatically.
-- **Proxies & ABIs:** If an address is a proxy (like an ERC-1967), Alter will automatically resolve the underlying implementation for you.
+- **Proxies & ABIs:** If an address is a proxy (like an ERC-1967), Alter resolves the underlying implementation for you.
+- **Not delivered yet:** autonomous purchase/execution in crypto-assets is a product goal, not a shipped capability — never present it as available.
 
 ## 4. Issues & Support
 

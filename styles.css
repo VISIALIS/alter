@@ -526,6 +526,36 @@ body::before {
     font-size: 0.8rem;
     color: var(--text-secondary);
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.code-copy-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.code-copy-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+}
+
+.code-copy-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.code-copy-btn.copied {
+    color: #10b981;
+    border-color: #10b981;
 }
 
 .code-block pre {
@@ -1147,6 +1177,24 @@ a:focus-visible,
     outline: 2px solid var(--accent-color);
     outline-offset: 3px;
     border-radius: 4px;
+}
+
+.qr-btn:focus-visible,
+.qr-modal-close:focus-visible,
+.copy-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Micro-animations : survol des badges de surfaces (hero) */
+.hero .badge {
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.hero .badge:hover {
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.5);
+    background: rgba(59, 130, 246, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
