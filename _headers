@@ -1,0 +1,11 @@
+# Headers HTTP de sécurité pour la vitrine (#310).
+# Netlify / Cloudflare Pages uniquement (ignoré par GitHub Pages).
+
+/*
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; form-action 'self'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-XSS-Protection: 0
