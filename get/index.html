@@ -129,29 +129,72 @@
     // tant que la cible mobile principale est l'application Web (les
     // stores publics apporteront la redirection automatique).
     (function () {
-        var ua = navigator.userAgent;
-        var isIOS = /iPhone|iPad|iPod/.test(ua) || (ua.indexOf('Mac') !== -1 && 'ontouchend' in document);
-        var isAndroid = /Android/.test(ua);
-        var id, label;
-        if (isIOS || isAndroid) {
+        function resolveOS() {
+            // 1. Client Hints (Chromium moderne)
+            if (navigator.userAgentData && navigator.userAgentData.platform) {
+                var p = navigator.userAgentData.platform.toLowerCase();
+                if (p.indexOf('win') !== -1) return 'windows';
+                if (p.indexOf('mac') !== -1) return 'macos';
+                if (p.indexOf('linux') !== -1) return 'linux';
+                if (p.indexOf('android') !== -1) return 'android';
+            }
+            // 2. navigator.platform
+            var plat = (navigator.platform || '').toLowerCase();
+            if (plat.indexOf('win') !== -1) return 'windows';
+            if (plat.indexOf('linux') !== -1 || plat.indexOf('x11') !== -1) return 'linux';
+            if (plat.indexOf('mac') !== -1) {
+                if ('ontouchend' in document || /iphone|ipad|ipod/.test((navigator.userAgent || '').toLowerCase())) return 'ios';
+                return 'macos';
+            }
+            if (plat.indexOf('iphone') !== -1 || plat.indexOf('ipad') !== -1 || plat.indexOf('ipod') !== -1) return 'ios';
+            // 3. User-Agent regex fallback
+            var ua = (navigator.userAgent || '').toLowerCase();
+            if (/iphone|ipad|ipod/.test(ua) || (ua.indexOf('mac') !== -1 && 'ontouchend' in document)) return 'ios';
+            if (/android/.test(ua)) return 'android';
+            if (/windows|win32|win64/.test(ua)) return 'windows';
+            if (/linux|x11/.test(ua)) return 'linux';
+            if (/macintosh|mac os x/.test(ua)) return 'macos';
+            return null;
+        }
+
+        var os = resolveOS();
+        var id = null;
+        var label = null;
+
+        if (os === 'ios' || os === 'android') {
             id = 'get-web';
-            label = (isIOS ? 'iOS' : 'Android') + ' detected — the Web App works right now. Native app: private beta below.';
+            label = (os === 'ios' ? 'iOS' : 'Android') + ' detected — the Web App is ready right now. Native app: private beta below.';
             var qr = document.getElementById('qr-block');
             if (qr) { qr.style.display = 'none'; }
-        } else if (/Windows/.test(ua)) {
-            id = 'get-windows'; label = 'Windows detected.';
-        } else if (/Mac/.test(ua)) {
-            id = 'get-macos'; label = 'macOS detected.';
-        } else if (/Linux/.test(ua)) {
-            id = 'get-linux'; label = 'Linux detected.';
+        } else if (os === 'windows') {
+            id = 'get-windows';
+            label = 'Windows detected — Desktop app (x64 / ARM64) ready to install.';
+        } else if (os === 'linux') {
+            id = 'get-linux';
+            label = 'Linux detected — Desktop app and CLI installer ready for your distribution.';
+        } else if (os === 'macos') {
+            id = 'get-macos';
+            label = 'macOS detected — Universal Notarized app (M-Series / Intel).';
         }
+
         if (id) {
             var card = document.getElementById(id);
             if (card) {
                 card.classList.add('get-highlight');
+                // Insérer un badge visuel distinctif dans le titre de la carte
+                var title = card.querySelector('h3');
+                if (title && !card.querySelector('.download-recommended-badge')) {
+                    var badge = document.createElement('span');
+                    badge.className = 'download-recommended-badge';
+                    badge.textContent = 'Detected';
+                    title.appendChild(badge);
+                }
                 card.parentNode.insertBefore(card, card.parentNode.firstChild);
             }
-            document.getElementById('detected-hint').textContent = label;
+            if (label) {
+                var hint = document.getElementById('detected-hint');
+                if (hint) { hint.textContent = label; }
+            }
         }
     })();
     </script>

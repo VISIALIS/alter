@@ -62,4 +62,34 @@
             // Rate limit anonyme atteint, offline, etc. : les badges gardent
             // leur texte de repli statique (voir markup), pas d'erreur visible.
         });
+
+    function highlightCurrentOS() {
+        var plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+        plat = plat.toLowerCase();
+        var osName = null;
+        if (plat.indexOf('win') !== -1) osName = 'windows';
+        else if (plat.indexOf('mac') !== -1 && !('ontouchend' in document) && !/iphone|ipad|ipod/.test((navigator.userAgent || '').toLowerCase())) osName = 'macos';
+        else if (plat.indexOf('linux') !== -1 || plat.indexOf('x11') !== -1) osName = 'linux';
+
+        if (!osName) return;
+        document.querySelectorAll('.download-platform-row').forEach(function (row) {
+            var platSpan = row.querySelector('.platform');
+            var label = (platSpan ? platSpan.textContent : '').toLowerCase().trim();
+            if (label.indexOf(osName) !== -1 || (osName === 'macos' && label === 'macos') || (osName === 'windows' && label === 'windows') || (osName === 'linux' && label === 'linux')) {
+                row.classList.add('detected-os-row');
+                if (platSpan && !platSpan.querySelector('.download-recommended-badge')) {
+                    var b = document.createElement('span');
+                    b.className = 'download-recommended-badge';
+                    b.textContent = 'Detected';
+                    platSpan.appendChild(b);
+                }
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', highlightCurrentOS);
+    } else {
+        highlightCurrentOS();
+    }
 })();

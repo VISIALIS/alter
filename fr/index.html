@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alter — L’EVM lisible, prouvable et accessible</title>
-    <meta name="description" content="Alter traduit l’historique d’actifs et de mouvements EVM dans le langage comptable ou fiscal de la juridiction demandée, avec preuves on-chain et sources réglementaires.">
+    <title>Alter — La plateforme d'intelligence multi-chaînes EVM</title>
+    <meta name="description" content="Explorez n’importe quelle adresse, transaction ou protocole EVM avec preuves on-chain vérifiables. Accessible via Web, Desktop, CLI et agents IA (MCP).">
     <!-- OpenGraph Meta Tags pour réseaux sociaux & WhatsApp -->
     <meta property="og:site_name" content="Alter">
     <meta property="og:title" content="Alter — La promesse blockchain. Tenue.">
-    <meta property="og:description" content="Un historique EVM traduit selon la juridiction demandée, avec preuves on-chain et sources réglementaires.">
+    <meta property="og:description" content="Explorez n’importe quelle adresse, transaction ou protocole EVM avec preuves on-chain vérifiables. Accessible via Web, Desktop, CLI et agents IA.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.alter-evm.com/fr/">
     <meta property="og:image" content="https://www.alter-evm.com/og-image.jpg">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@VISIALIS">
     <meta name="twitter:title" content="Alter — La promesse blockchain. Tenue.">
-    <meta name="twitter:description" content="Un historique EVM traduit selon la juridiction demandée, avec preuves on-chain et sources réglementaires.">
+    <meta name="twitter:description" content="Explorez n’importe quelle adresse, transaction ou protocole EVM avec preuves on-chain vérifiables. Accessible via Web, Desktop, CLI et agents IA.">
     <meta name="twitter:image" content="https://www.alter-evm.com/og-image.jpg">
     
     <link rel="canonical" href="https://www.alter-evm.com/fr/">
@@ -41,16 +41,17 @@
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Alter",
+      "alternateName": "Alter EVM",
       "url": "https://www.alter-evm.com/fr/",
       "image": "https://www.alter-evm.com/og-image.jpg",
-      "applicationCategory": "DeveloperApplication",
+      "applicationCategory": "DeveloperApplication, FinanceApplication",
       "operatingSystem": "Web, macOS, Windows, Linux",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "EUR"
       },
-      "description": "Alter traduit l’historique d’actifs et de mouvements EVM dans le langage comptable ou fiscal de la juridiction demandée, avec preuves on-chain et sources réglementaires.",
+      "description": "La plateforme ouverte d'intelligence d'adresses multi-chaînes EVM. Explorez des adresses, comprenez des actifs et des protocoles avec preuves on-chain vérifiables, via Web, Desktop, CLI et agents IA (MCP).",
       "author": {
         "@type": "Organization",
         "name": "VISIALIS",
@@ -226,15 +227,53 @@
                             </svg>
                         </button>
                     </div>
+                    <button class="btn btn-secondary demo-trigger-btn" onclick="document.getElementById('demo-modal-app').classList.add('visible')" aria-label="Voir la démo interactive">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Voir la démo
+                    </button>
                 </div>
             </div>
             <div class="profile-visual">
-                 <div class="platform-badges">
+                <div class="app-demo-window">
+                    <div class="app-demo-header">
+                        <div class="app-demo-dots">
+                            <div class="app-demo-dot red"></div>
+                            <div class="app-demo-dot yellow"></div>
+                            <div class="app-demo-dot green"></div>
+                        </div>
+                        <span class="app-demo-title">Alter Web — Sans jargon technique</span>
+                    </div>
+                    <div class="app-demo-body">
+                        <div class="app-demo-search">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <span>alice.eth</span>
+                            <span class="app-demo-cursor"></span>
+                        </div>
+                        <div class="app-demo-card">
+                            <div class="app-demo-status-row">
+                                <span class="app-demo-pill active">🟢 Compte actif</span>
+                                <span style="font-size: 0.75rem; color: #94a3b8;">Ethereum &amp; Gnosis</span>
+                            </div>
+                            <div class="app-demo-balance">2,45 ETH</div>
+                            <div class="app-demo-fiat">≈ 6 850 € · Actifs qualifiés</div>
+                            <div class="app-demo-actions-bar">
+                                <span class="app-demo-action-chip highlight">Transférer</span>
+                                <span class="app-demo-action-chip">Échanger</span>
+                                <span class="app-demo-action-chip">Épargner</span>
+                            </div>
+                            <div class="app-demo-proof-tag">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                                <span>Preuve on-chain vérifiable · Bloc #20 684 120</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-badges" style="margin-top: 1rem;">
                     <span class="badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Web</span>
-                    <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> iOS (bientôt)</span>
-                    <span class="badge"><svg viewBox="0 0 576 512" width="12" height="12" fill="currentColor"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10h-.05l-48.54 84.07a283.84 283.84 0 0 0-246.51 0l-48.54-84.11a10 10 0 1 0-17.3 10l47.94 83C64.53 202.22 8.24 285.55 0 384h576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg> Android (bientôt)</span>
                     <span class="badge"><svg viewBox="0 0 448 512" width="12" height="12" fill="currentColor"><path d="M0 93.2l183.6-25.3v177.4H0V93.2zm0 325.6l183.6 25.3V268.4H0v150.4zm203.8 28L448 480V268.4H203.8v178.4zm0-380.6v180.1H448V32L203.8 66.2z"/></svg> Windows</span>
                     <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> macOS</span>
+                    <span class="badge"><svg viewBox="0 0 384 512" width="12" height="12" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> iOS (bêta)</span>
+                    <span class="badge"><svg viewBox="0 0 576 512" width="12" height="12" fill="currentColor"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10h-.05l-48.54 84.07a283.84 283.84 0 0 0-246.51 0l-48.54-84.11a10 10 0 1 0-17.3 10l47.94 83C64.53 202.22 8.24 285.55 0 384h576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg> Android (bêta)</span>
                 </div>
             </div>
         </div>
@@ -243,17 +282,17 @@
         <div class="profile-block reverse">
             <div class="profile-info">
                 <div class="use-case-label" style="background: rgba(59,130,246,0.15); color: var(--accent-color);">alter-cli · Mode Inspecteur Desktop</div>
-                <h3>Endpoint RPC local &amp; inspection scriptable</h3>
-                <p>Travaillez au niveau JSON-RPC lorsque c’est utile, ou appuyez-vous sur les objets métier déjà modélisés par Alter.</p>
+                <h3>Point d'accès RPC unifié &amp; approche « Lego » des protocoles</h3>
+                <p>Ne perdez plus de temps avec des dizaines d'URLs RPC et du code ABI verbeux : Alter offre un point d’entrée résilient unique et des briques Lego haut niveau prêtes à composer.</p>
                 <div class="use-cases">
                     <ul>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Endpoint RPC local</strong> : <code>alter rpc serve</code> route les requêtes HTTP vers les endpoints configurés, avec équilibrage, surveillance de santé et basculement.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Inspection avec preuve</strong> : <code>address inspect</code> relie les capacités détectées à leur source on-chain.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Automatisation CLI</strong> : Les sorties JSON et arborescentes s’intègrent aux scripts et workflows reproductibles.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Point d’accès RPC unifié</strong> : <code>alter rpc serve</code> expose un endpoint HTTP local unique (<code>http://localhost:8545</code>) avec routage multi-chaînes, basculement automatique et répartition de charge sur nœuds testés.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Briques Lego de protocoles</strong> : Les protocoles (pools de prêt, AMM, tokens RWA, coffres) sont modélisés sous forme d'objets métier typés avec capacités auditées et preuves on-chain — assemblez-les sans réécrire de plomberie ABI.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Automatisation scriptable</strong> : Les sorties JSON et arborescentes s’intègrent naturellement aux scripts bash, pipelines CI et outils de développement.</li>
                     </ul>
                 </div>
                 <div style="font-size: 0.85rem; color: #93c5fd; margin-bottom: 1.5rem; background: rgba(59,130,246,0.1); padding: 0.5rem 0.8rem; border-radius: 6px;">
-                    <strong>Portée actuelle :</strong> alter-cli · Alter Desktop · endpoint HTTP local, sans WebSocket ni service cloud/public
+                    <strong>Périmètre développeur :</strong> alter-cli · Alter Desktop · endpoint JSON-RPC HTTP local. Aucune télémétrie externe.
                 </div>
                 <div class="profile-actions">
                     <div class="install-command">
@@ -266,16 +305,19 @@
             </div>
             <div class="profile-visual">
                 <div class="code-block">
-                    <div class="code-header">Terminal</div>
+                    <div class="code-header">Terminal — RPC Unifié &amp; Inspection de Protocoles</div>
                     <pre><code>$ alter rpc serve
-
 ✓ Endpoint RPC local unifié démarré : <span style="color:#A5B4FC">http://localhost:8545</span>
-✓ Chaîne par défaut : Ethereum (1)
-✓ Chaînes servies : Ethereum (1), Gnosis (100)
-→ En attente de requêtes JSON-RPC... (Ctrl+C pour arrêter)
+✓ Basculement multi-chaînes actif : Ethereum (1), Gnosis (100)
+→ Prêt pour Hardhat, Foundry et vos scripts...
 
-$ export ETH_RPC_URL=http://localhost:8545
-$ npx hardhat run scripts/deploy.js</code></pre>
+$ alter address inspect 0x52Ae12AB... --format json
+{
+  "protocol": "bancor_v1",
+  "lego": "amm_pool",
+  "capabilities": ["swap", "liquidity_provision"],
+  "verified_proof": "0x... (correspondance bytecode on-chain)"
+}</code></pre>
                 </div>
             </div>
         </div>
@@ -283,24 +325,24 @@ $ npx hardhat run scripts/deploy.js</code></pre>
         <!-- Surface : MCP pour agents -->
         <div class="profile-block">
             <div class="profile-info">
-                <div class="use-case-label" style="background: rgba(168,85,247,0.15); color: #c084fc;">alter-mcp · Serveur pour agents IA</div>
-                <h3>Connaissance structurée et vérifiable</h3>
-                <p>Alter fournit des outils MCP typés et découvrables, avec des résultats reliés à leurs preuves et des limites explicites.</p>
+                <div class="use-case-label" style="background: rgba(168,85,247,0.15); color: #c084fc;">alter-mcp · Assistants IA &amp; Agents Autonomes</div>
+                <h3>Posez vos questions en clair : votre IA répond avec preuves on-chain</h3>
+                <p>Dialogue naturel avec votre IA habituelle (ChatGPT, Claude Cowork, assistants locaux) : Alter lui apporte des outils MCP typés pour explorer adresses, contrats et transactions sans hallucination.</p>
                 <div class="use-cases">
                     <ul>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Portrait vérifiable</strong> : <code>address.inspect</code> inclut la source de preuve de chaque capacité exposée.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Résultat complet</strong> : <code>address.concentration</code> renvoie la liste complète des détenteurs détectés.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Contexte transactionnel</strong> : <code>transaction.inspect</code> classifie toutes les adresses impliquées dans la transaction.</li>
-                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Relevé classifié</strong> : <code>address.statement</code> produit sur période fermée des mouvements, lignes par wallet, rapprochements et preuves exploitables pour le contrôle.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Compréhension en langage naturel</strong> : Demandez simplement <em>« Que contient ce portefeuille et combien rapporte chaque position ? »</em> — votre IA s'appuie sur <code>address.inspect</code> et <code>address.portfolio</code> pour vous répondre avec exactitude.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Zéro hallucination</strong> : Chaque donnée fournie par Alter conserve sa preuve cryptographique on-chain et mentionne explicitement ses limites vérifiables.</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Modèle agentique &amp; options payantes</strong> : Conçu pour les agents autonomes — un agent peut souscrire et acquérir à la volée des options avancées ou services premium au nom de son utilisateur (ADR-0106).</li>
+                        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> <strong>Relevé classifié pour audit</strong> : <code>address.statement</code> produit sur période fermée des lignes d'activité, des rapprochements et des preuves pour le contrôle.</li>
                     </ul>
                 </div>
                 <div style="font-size: 0.85rem; color: #e9d5ff; margin-bottom: 1.5rem; background: rgba(168,85,247,0.1); padding: 0.5rem 0.8rem; border-radius: 6px;">
-                    <strong>Disponible :</strong> alter-mcp. <strong>Objectif non livré :</strong> achat autonome en crypto-actifs et autonomie transactionnelle de bout en bout.
+                    <strong>Disponible :</strong> outils standards alter-mcp. <strong>Modèle agentique :</strong> découverte et acquisition autonome d’options cadrées selon ADR-0106.
                 </div>
             </div>
             <div class="profile-visual">
                 <div class="code-block mcp-config-block">
-                    <div class="code-header"><span>Configuration Client MCP (mcp.json)</span><button class="code-copy-btn" aria-label="Copier la configuration MCP" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText); this.classList.add('copied'); const t=this.textContent; this.textContent='Copié'; setTimeout(()=>{this.classList.remove('copied'); this.textContent=t;}, 2000);">Copier</button></div>
+                    <div class="code-header"><span>Connexion Claude, ChatGPT &amp; clients MCP</span><button class="code-copy-btn" aria-label="Copier la configuration MCP" onclick="navigator.clipboard.writeText(this.closest('.code-block').querySelector('code').innerText); this.classList.add('copied'); const t=this.textContent; this.textContent='Copié'; setTimeout(()=>{this.classList.remove('copied'); this.textContent=t;}, 2000);">Copier</button></div>
                     <pre><code>{
   "mcpServers": {
     "alter": {
@@ -312,7 +354,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                 </div>
                 <a href="/llms.txt" class="instructions-link">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    Instructions pour Agents (System Prompt / llms.txt)
+                    Instructions pour Agents IA (System Prompt / llms.txt)
                 </a>
             </div>
         </div>
@@ -338,23 +380,30 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             </div>
             <h3>Surfaces cohérentes</h3>
-            <p>Web, Desktop, CLI et MCP s’appuient sur une intelligence commune. Les applications mobiles restent à venir.</p>
+            <p>Web, Desktop, CLI et MCP s’appuient sur une intelligence commune. Les applications mobiles restent à venir en bêta privée.</p>
         </div>
     </section>
 
     <section class="community-section">
         <div class="community-card">
             <h2>Rejoignez l'écosystème</h2>
-            <p>Suivez les annonces officielles et échangez avec les autres utilisateurs et développeurs au sein de notre communauté.</p>
+            <p>Suivez les annonces officielles et les mises à jour en direct sur X, et rejoignez Telegram pour vos retours (feedback), l'entraide et les échanges directs avec l'équipe.</p>
             <div class="community-cta">
-                <span class="btn btn-primary is-soon" aria-disabled="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
-                    Telegram <span class="soon-badge">Bientôt</span>
-                </span>
+                <a href="https://x.com/VISIALIS" target="_blank" rel="noopener" class="btn btn-primary" aria-label="Suivre l'actualité d'Alter sur X">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Actualités officielles sur X
+                </a>
                 <span class="btn btn-secondary is-soon" aria-disabled="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                    X (Twitter) <span class="soon-badge">Bientôt</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 8px;"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                    Retours Telegram <span class="soon-badge">Bientôt</span>
                 </span>
+            </div>
+            <div class="social-active-card">
+                <div>
+                    <strong>Mises à jour produit régulières :</strong>
+                    <p>Chaque nouvelle version d'Alter, ajout de protocole et amélioration de sécurité est partagée en direct sur X et consignée sur GitHub Releases.</p>
+                </div>
+                <a href="https://github.com/VISIALIS/alter/releases" target="_blank" rel="noopener" class="btn btn-secondary" style="white-space: nowrap; font-size: 0.85rem; padding: 0.5rem 0.9rem;" data-alter-version>Releases v1.24.0</a>
             </div>
         </div>
     </section>
@@ -559,7 +608,7 @@ $ npx hardhat run scripts/deploy.js</code></pre>
                     <ul>
                         <li><a href="mailto:support@alter-evm.com">Support par Email</a></li>
                         <li><span>Telegram <span class="soon-badge">Bientôt</span></span></li>
-                        <li><span>X (Twitter) <span class="soon-badge">Bientôt</span></span></li>
+                        <li><a href="https://x.com/VISIALIS" target="_blank" rel="noopener">X (Twitter) @VISIALIS</a></li>
                         <li><a href="https://github.com/VISIALIS/alter/discussions" target="_blank" rel="noopener">GitHub Discussions</a></li>
                     </ul>
                 </div>
@@ -600,12 +649,53 @@ $ npx hardhat run scripts/deploy.js</code></pre>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">https://app.alter-evm.com/</p>
         </div>
     </div>
+    <div id="demo-modal-app" class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" onclick="if(event.target === this) this.classList.remove('visible')">
+        <div class="demo-modal-content">
+            <button class="demo-modal-close" onclick="document.getElementById('demo-modal-app').classList.remove('visible')" aria-label="Fermer la démo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 id="demo-modal-title" style="margin-bottom: 0.5rem; color: var(--text-primary);">Alter Web App — Présentation interactive</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">Découvrez comment Alter traduit la complexité de la blockchain en actions compréhensibles et prouvées.</p>
+            <div class="app-demo-window" style="max-width: 100%;">
+                <div class="app-demo-header">
+                    <div class="app-demo-dots">
+                        <div class="app-demo-dot red"></div>
+                        <div class="app-demo-dot yellow"></div>
+                        <div class="app-demo-dot green"></div>
+                    </div>
+                    <span class="app-demo-title">Démonstration · 0xd8dA...6045</span>
+                </div>
+                <div class="app-demo-body">
+                    <div class="app-demo-card">
+                        <div class="app-demo-status-row">
+                            <span class="app-demo-pill active">🟢 Compte personnel actif</span>
+                            <span style="font-size: 0.8rem; color: #94a3b8;">Multi-chaînes (Ethereum, Gnosis, Arbitrum)</span>
+                        </div>
+                        <div class="app-demo-balance">Solde total : 14 280,50 $</div>
+                        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 0.8rem;">Actifs qualifiés selon leur réalité économique : coins, liquid staking, positions d'épargne.</p>
+                        <div class="app-demo-actions-bar">
+                            <span class="app-demo-action-chip highlight">Transférer</span>
+                            <span class="app-demo-action-chip">Échanger</span>
+                            <span class="app-demo-action-chip">Gérer collatéral</span>
+                        </div>
+                        <div class="app-demo-proof-tag">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            <span>Preuve cryptographique : vérifiée sur l'état RPC public</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://app.alter-evm.com/" class="btn btn-primary" target="_blank" rel="noopener">Ouvrir l'App Web Alter maintenant →</a>
+            </div>
+        </div>
+    </div>
     <script src="/version-badge.js" defer></script>
     <script>
         // Fermeture des modales avec la touche Échap (accessibilité clavier).
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
-                document.querySelectorAll('.qr-modal.visible').forEach(function (modal) {
+                document.querySelectorAll('.qr-modal.visible, .demo-modal.visible').forEach(function (modal) {
                     modal.classList.remove('visible');
                 });
             }

@@ -2,7 +2,7 @@
 
 🤖 **Hello AI Agent!** 
 If you are reading this file, you have been tasked with installing, configuring, or using the Alter MCP server.
-Alter is a privacy-first, zero-tracking tool that qualifies EVM addresses and reconstructs their asset and movement history. On request, it translates that history into the accounting or tax language of a user-selected jurisdiction. Each translated item links both to its on-chain evidence and to the regulatory or accounting source used.
+Alter is an open, privacy-first, zero-tracking multi-chain EVM intelligence tool that qualifies EVM addresses and reconstructs their asset and movement history. Whether you are an AI assistant in an IDE (Cursor, Windsurf), a conversational desktop workspace (Claude Desktop, Claude Cowork), or a web interface (ChatGPT with MCP / custom actions), Alter equips you with structured on-chain verification capabilities without managing individual RPC endpoints. On request, it translates that history into the accounting or tax language of a user-selected jurisdiction, linking facts both to cryptographic proofs and to normative sources.
 
 This file gives you all the context you need to orchestrate Alter autonomously.
 
@@ -27,7 +27,7 @@ Download the latest `.exe` binaries directly from the GitHub releases page: `htt
 
 ## 2. MCP Client Configuration
 
-To connect the user's environment (Claude Desktop, Cursor, Windsurf, etc.) to the Alter MCP server, append this block to their MCP configuration file (e.g. `claude_desktop_config.json` or `.mcp.json`):
+To connect the user's environment (Claude Desktop, Claude Cowork, ChatGPT MCP, Cursor, Windsurf, etc.) to the Alter MCP server, append this block to their MCP configuration file (e.g. `claude_desktop_config.json`, `.mcp.json` or client settings):
 
 ```json
 {
@@ -40,8 +40,8 @@ To connect the user's environment (Claude Desktop, Cursor, Windsurf, etc.) to th
 }
 ```
 
-**CRITICAL NOTE FOR CLAUDE DESKTOP:** 
-Claude Desktop requires absolute paths for the command. If installed via Homebrew on macOS (ARM64), use `/opt/homebrew/bin/alter-mcp`. If installed via the script, find the path (e.g., `/Users/username/.local/bin/alter-mcp`) and use it in the `"command"` field.
+**CRITICAL NOTE FOR CLAUDE DESKTOP & COWORK:** 
+Claude Desktop and Cowork require absolute paths for the command. If installed via Homebrew on macOS (ARM64), use `/opt/homebrew/bin/alter-mcp`. If installed via the script, find the path (e.g., `/Users/username/.local/bin/alter-mcp`) and use it in the `"command"` field.
 
 ## 3. How to use it
 
@@ -64,7 +64,7 @@ Guidance:
 - **Current coverage:** Structured jurisdictional translation and regulatory-source links are not yet exhaustive. Preserve `unclassified`, `undetermined`, confidence, evidence, and limitation states rather than filling gaps.
 - **Multichain by default:** Alter resolves addresses across multiple EVM chains automatically.
 - **Proxies & ABIs:** If an address is a proxy (like an ERC-1967), Alter resolves the underlying implementation for you.
-- **Not delivered yet:** autonomous purchase/execution in crypto-assets is a product goal, not a shipped capability — never present it as available.
+- **Not delivered yet:** autonomous purchase/execution in crypto-assets (ADR-0106) is a product goal currently under development, not a shipped capability — never present it as available.
 
 ## 4. Issues & Support
 
